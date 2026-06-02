@@ -141,7 +141,7 @@ export function Navbar() {
                             <div className="font-heading text-white text-sm leading-tight group-hover/cat:text-[#D4A853] transition-colors">
                               {cat.name}
                             </div>
-                            <div className="text-gray-500 text-[11px] leading-tight mt-0.5 truncate">
+                            <div className="text-gray-400 text-[11px] leading-tight mt-0.5 truncate">
                               {cat.subtitle}
                             </div>
                           </div>
@@ -210,7 +210,7 @@ export function Navbar() {
                         Video
                       </span>
                     </div>
-                    <div className="text-gray-500 text-[11px] leading-tight mt-0.5 truncate">
+                    <div className="text-gray-400 text-[11px] leading-tight mt-0.5 truncate">
                       18 buổi · A.I Workflow · Yêu cầu đăng nhập
                     </div>
                   </div>

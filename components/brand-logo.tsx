@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import NextImage from "next/image";
 import { Sparkles } from "lucide-react";
 import { site } from "@/lib/site-config";
 
@@ -50,15 +51,14 @@ export function BrandLogo({ size = 40, src, className = "" }: BrandLogoProps) {
   }
 
   return (
-    <div className={`shrink-0 ${className}`} style={{ width: size, height: size }}>
-      <img
+    <div className={`shrink-0 relative ${className}`} style={{ width: size, height: size }}>
+      <NextImage
         src={finalSrc}
         alt={`${site.brandName} logo`}
         width={size}
         height={size}
+        priority
         className="w-full h-full object-contain"
-        loading="eager"
-        decoding="async"
       />
     </div>
   );

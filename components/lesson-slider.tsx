@@ -84,7 +84,7 @@ export function LessonSlider({ sessions, accent, accent2, className = "" }: Less
         <div className="flex items-center gap-3 min-w-0 flex-1">
           <PlayCircle size={18} className="shrink-0" style={{ color: accent }} />
           <div className="min-w-0">
-            <p className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-500 mb-0.5">
+            <p className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-400 mb-0.5">
               Đang phát
             </p>
             <p className="text-white font-heading text-sm truncate">{active.title}</p>
@@ -103,7 +103,7 @@ export function LessonSlider({ sessions, accent, accent2, className = "" }: Less
           >
             <span className="font-bold">{String(index + 1).padStart(2, "0")}</span>
             <span className="text-gray-600 mx-1.5">/</span>
-            <span className="text-gray-500">{String(total).padStart(2, "0")}</span>
+            <span className="text-gray-400">{String(total).padStart(2, "0")}</span>
           </span>
           {total > 1 && (
             <>
@@ -145,7 +145,7 @@ export function LessonSlider({ sessions, accent, accent2, className = "" }: Less
               Danh sách buổi học
             </p>
             <div className="flex-1 h-px" style={{ background: `${accent}20` }} />
-            <p className="font-sub text-[10px] uppercase tracking-[0.2em] text-gray-500">
+            <p className="font-sub text-[10px] uppercase tracking-[0.2em] text-gray-400">
               {total} buổi
             </p>
           </div>

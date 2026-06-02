@@ -46,7 +46,7 @@ export default function KhoaHocOverview() {
       <div className="section-divider mx-6" />
 
       {/* TWO CATEGORY CARDS */}
-      <section className="py-24 md:py-32 px-6">
+      <section className="py-14 md:py-20 lg:py-28 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6">
             {courseCategories.map((cat, i) => {
@@ -108,7 +108,7 @@ export default function KhoaHocOverview() {
                       </p>
 
                       <div className="pt-6 border-t" style={{ borderColor: `${accent}25` }}>
-                        <p className="font-sub text-[11px] uppercase tracking-[0.2em] text-gray-500 mb-4">
+                        <p className="font-sub text-[11px] uppercase tracking-[0.2em] text-gray-400 mb-4">
                           {cat.classes.length} lớp chuyên môn
                         </p>
                         <div className="space-y-2.5">

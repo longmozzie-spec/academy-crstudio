@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Play, Film } from "lucide-react";
 import { Video } from "@/lib/site-config";
 
@@ -44,13 +45,13 @@ export function VideoCard({ item, onOpen, showLabel = true }: VideoCardProps) {
     >
       <div className="aspect-video bg-gradient-to-br from-gray-900 to-black relative overflow-hidden">
         {thumb ? (
-          <img
+          <Image
             src={thumb}
             alt={item.title}
-            loading="lazy"
-            decoding="async"
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             onError={() => setThumbErrored(true)}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            className="object-cover transition-transform duration-700 group-hover:scale-110"
           />
         ) : (
           // Facebook reels placeholder — không có thumbnail công khai

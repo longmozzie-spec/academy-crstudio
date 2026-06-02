@@ -92,7 +92,7 @@ export function CategoryLanding({ category }: { category: CourseCategory }) {
       <div className="section-divider mx-6" />
 
       {/* CLASSES GRID */}
-      <section className="py-24 md:py-32 px-6">
+      <section className="py-14 md:py-20 lg:py-28 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
             <Reveal>

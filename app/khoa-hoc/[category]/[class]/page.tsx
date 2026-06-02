@@ -1,6 +1,7 @@
 "use client";
 
 import { useParams, notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowLeft, ArrowRight, CheckCircle2, Sparkles, Clock, GraduationCap,
@@ -49,13 +50,13 @@ export default function ClassDetailPage() {
           {/* Breadcrumb */}
           <Reveal>
             <div className="flex items-center gap-2 mb-8 font-sub text-xs uppercase tracking-[0.2em]">
-              <Link href="/khoa-hoc" className="text-gray-500 hover:text-[#D4A853]">
+              <Link href="/khoa-hoc" className="text-gray-400 hover:text-[#D4A853]">
                 Khóa Học
               </Link>
               <span className="text-gray-700">/</span>
               <Link
                 href={`/khoa-hoc/${category.slug}`}
-                className="text-gray-500 hover:text-[#D4A853]"
+                className="text-gray-400 hover:text-[#D4A853]"
               >
                 {category.name}
               </Link>
@@ -117,17 +118,17 @@ export default function ClassDetailPage() {
                 <div className="grid grid-cols-3 gap-4 py-6 border-y border-white/8">
                   <div>
                     <Clock size={16} className="mb-2" style={{ color: accent }} />
-                    <p className="font-sub text-[10px] uppercase tracking-[0.18em] text-gray-500 mb-1">Thời lượng</p>
+                    <p className="font-sub text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-1">Thời lượng</p>
                     <p className="text-white text-sm font-medium leading-tight">{cls.duration ?? "Đang cập nhật"}</p>
                   </div>
                   <div>
                     <GraduationCap size={16} className="mb-2" style={{ color: accent }} />
-                    <p className="font-sub text-[10px] uppercase tracking-[0.18em] text-gray-500 mb-1">Cấp độ</p>
+                    <p className="font-sub text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-1">Cấp độ</p>
                     <p className="text-white text-sm font-medium leading-tight">{cls.level ?? "Đang cập nhật"}</p>
                   </div>
                   <div>
                     <Layers size={16} className="mb-2" style={{ color: accent }} />
-                    <p className="font-sub text-[10px] uppercase tracking-[0.18em] text-gray-500 mb-1">Hình thức</p>
+                    <p className="font-sub text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-1">Hình thức</p>
                     <p className="text-white text-sm font-medium leading-tight">{cls.format ?? "Đang cập nhật"}</p>
                   </div>
                 </div>
@@ -249,7 +250,7 @@ export default function ClassDetailPage() {
 
       {/* INTRO VIDEO — chỉ render nếu lớp có khai báo introVideoYoutubeId (kể cả rỗng) */}
       {cls.introVideoYoutubeId !== undefined && (
-        <section className="py-20 md:py-28 px-6">
+        <section className="py-12 md:py-18 lg:py-24 px-6">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-10">
               <Reveal>
@@ -322,7 +323,7 @@ export default function ClassDetailPage() {
 
       {/* OUTCOMES */}
       {cls.outcomes && cls.outcomes.length > 0 && (
-        <section className="py-20 md:py-28 px-6">
+        <section className="py-12 md:py-18 lg:py-24 px-6">
           <div className="max-w-7xl mx-auto">
             <div className="mb-12">
               <Reveal>
@@ -366,7 +367,7 @@ export default function ClassDetailPage() {
 
       {/* CURRICULUM */}
       {cls.modules && cls.modules.length > 0 && (
-        <section className="py-20 md:py-28 px-6">
+        <section className="py-12 md:py-18 lg:py-24 px-6">
           <div className="max-w-7xl mx-auto">
             <div className="mb-12">
               <Reveal>
@@ -398,7 +399,7 @@ export default function ClassDetailPage() {
 
       {/* STUDENT WORKS — sản phẩm của học viên trong lớp */}
       {cls.studentWorks !== undefined && (
-        <section className="py-20 md:py-28 px-6">
+        <section className="py-12 md:py-18 lg:py-24 px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <Reveal>
@@ -444,11 +445,12 @@ export default function ClassDetailPage() {
                       >
                         <div className="aspect-video relative overflow-hidden bg-gradient-to-br from-[#1a1a1a] to-[#050505]">
                           {thumb ? (
-                            <img
+                            <Image
                               src={thumb}
                               alt={w.title}
-                              loading="lazy"
-                              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                              fill
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                              className="object-cover transition-transform duration-700 group-hover:scale-110"
                             />
                           ) : (
                             <div className="absolute inset-0 flex items-center justify-center">
@@ -514,7 +516,7 @@ export default function ClassDetailPage() {
 
       {/* OTHER CLASSES */}
       {otherClasses.length > 0 && (
-        <section className="py-20 md:py-28 px-6">
+        <section className="py-12 md:py-18 lg:py-24 px-6">
           <div className="max-w-7xl mx-auto">
             <div className="mb-12">
               <Reveal>
@@ -546,9 +548,9 @@ export default function ClassDetailPage() {
                       <p className="font-heading text-white text-base group-hover:text-[#D4A853] transition-colors">
                         {c.name}
                       </p>
-                      <p className="text-gray-500 text-xs mt-1 truncate">{c.tagline}</p>
+                      <p className="text-gray-400 text-xs mt-1 truncate">{c.tagline}</p>
                     </div>
-                    <ArrowRight size={18} className="text-gray-500 group-hover:translate-x-1 transition-transform shrink-0" style={{ color: accent }} />
+                    <ArrowRight size={18} className="text-gray-400 group-hover:translate-x-1 transition-transform shrink-0" style={{ color: accent }} />
                   </Link>
                 );
               })}

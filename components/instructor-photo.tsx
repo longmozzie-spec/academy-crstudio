@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { site } from "@/lib/site-config";
 
 interface InstructorPhotoProps {
@@ -60,13 +61,13 @@ export function InstructorPhoto({
   }
 
   return (
-    <img
+    <Image
       src={finalSrc}
       alt={`${site.brandName} – Giảng viên`}
+      fill
+      sizes="(max-width: 768px) 100vw, 500px"
       onError={() => setErrored(true)}
-      loading="lazy"
-      decoding="async"
-      className={`absolute inset-0 w-full h-full object-cover ${className}`}
+      className={`object-cover ${className}`}
       style={{ objectPosition: finalPosition }}
     />
   );

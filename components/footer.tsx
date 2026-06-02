@@ -119,7 +119,7 @@ export function Footer() {
 
       <div className="border-t border-[#D4A853]/10 py-6 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-gray-500 text-xs">
+          <p className="text-gray-400 text-xs">
             © {new Date().getFullYear()} <span className="text-[#D4A853]">{site.brandName}</span> · All rights reserved.
           </p>
           <p className="text-gray-600 text-xs">

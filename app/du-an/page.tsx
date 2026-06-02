@@ -76,7 +76,7 @@ export default function DuAnPage() {
               {/* Author tabs */}
               <div className="flex items-center gap-2">
                 <Filter size={14} className="text-[#D4A853] hidden md:block" />
-                <span className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-500 hidden md:block">
+                <span className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-400 hidden md:block">
                   Tác giả
                 </span>
                 <div className="flex gap-1.5 ml-2 flex-wrap">
@@ -107,7 +107,7 @@ export default function DuAnPage() {
 
               {/* Category tabs */}
               <div className="flex items-center gap-2 flex-1 min-w-0">
-                <span className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-500 hidden md:block shrink-0">
+                <span className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-400 hidden md:block shrink-0">
                   Thể loại
                 </span>
                 <div className="flex gap-1.5 ml-2 flex-wrap">
@@ -136,7 +136,7 @@ export default function DuAnPage() {
         <div className="max-w-7xl mx-auto">
           {filtered.length === 0 ? (
             <div className="text-center py-20">
-              <p className="text-gray-500">Không có dự án nào khớp với bộ lọc.</p>
+              <p className="text-gray-400">Không có dự án nào khớp với bộ lọc.</p>
             </div>
           ) : (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -150,7 +150,7 @@ export default function DuAnPage() {
 
           {/* Count */}
           <div className="mt-12 text-center">
-            <p className="font-sub text-xs uppercase tracking-[0.25em] text-gray-500">
+            <p className="font-sub text-xs uppercase tracking-[0.25em] text-gray-400">
               Hiển thị <span className="text-[#D4A853]">{filtered.length}</span> / {allProjects.length} dự án
             </p>
           </div>

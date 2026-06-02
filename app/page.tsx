@@ -10,7 +10,6 @@ import { ContactSection } from "@/components/contact-section";
 import { InstructorPhoto } from "@/components/instructor-photo";
 import { HeroBackground } from "@/components/hero-background";
 import { HeroSignaturePanel } from "@/components/hero-signature";
-import { HeroGridAccent } from "@/components/ui/hero-grid-accent";
 import { ElegantShapesBackground } from "@/components/ui/elegant-shapes";
 import { site, featuredVideos, courseCategories, stats, Video } from "@/lib/site-config";
 
@@ -21,18 +20,8 @@ function Hero() {
       {/* Hero background image — appears only if file exists at public/brand/hero-bg.jpg */}
       <HeroBackground />
 
-      {/* Grid + radial accent — thay shader cũ */}
-      <HeroGridAccent />
-
       {/* Floating gradient shapes — gold/amber/emerald, animate float + rotate */}
       <ElegantShapesBackground />
-
-      {/* Aurora backgrounds (luôn hiện, đè lên ảnh nền + threads) */}
-      <div className="aurora-blob w-[700px] h-[700px] bg-[#D4A853]/20 -top-40 -right-40" />
-      <div
-        className="aurora-blob w-[600px] h-[600px] bg-[#2F7D5B]/10 -bottom-40 -left-40"
-        style={{ animationDelay: "-9s" }}
-      />
 
       {/* Decorative vertical line */}
       <div className="absolute left-8 top-32 bottom-32 w-px bg-gradient-to-b from-transparent via-[#D4A853]/40 to-transparent hidden lg:block" />
@@ -127,16 +116,18 @@ function Hero() {
                       <span className="font-heading text-3xl md:text-4xl text-gold-gradient font-bold">{s.num}</span>
                       <span className="font-heading text-lg text-[#D4A853]">{s.suffix}</span>
                     </div>
-                    <p className="text-gray-500 text-[10px] md:text-xs mt-1.5 uppercase tracking-[0.18em] font-sub">{s.label}</p>
+                    <p className="text-gray-400 text-[10px] md:text-xs mt-1.5 uppercase tracking-[0.18em] font-sub">{s.label}</p>
                   </div>
                 ))}
               </div>
             </Reveal>
           </div>
 
-          {/* RIGHT — Decorative editorial panel (ảnh signature) */}
+          {/* RIGHT — Decorative editorial panel (ảnh signature) — ẩn trên mobile/tablet */}
           <Reveal delay={400}>
-            <HeroSignaturePanel />
+            <div className="hidden lg:block">
+              <HeroSignaturePanel />
+            </div>
           </Reveal>
         </div>
       </div>
@@ -147,7 +138,7 @@ function Hero() {
 // ─── ABOUT INSTRUCTOR (mini) ──────────────────────────────────────────────────
 function AboutMini() {
   return (
-    <section className="relative py-28 md:py-36 px-6">
+    <section className="relative py-16 md:py-24 lg:py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-[5fr_7fr] gap-12 lg:gap-20 items-center">
           <Reveal>
@@ -213,7 +204,7 @@ function FeaturedVideos() {
   const [active, setActive] = useState<Video | null>(null);
 
   return (
-    <section className="relative py-28 md:py-36 px-6">
+    <section className="relative py-16 md:py-24 lg:py-32 px-6">
       <div className="aurora-blob w-[500px] h-[500px] bg-[#D4A853]/8 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
       <div className="max-w-7xl mx-auto relative">
@@ -262,7 +253,7 @@ function FeaturedVideos() {
 // ─── COURSES TEASER ───────────────────────────────────────────────────────────
 function CoursesTeaser() {
   return (
-    <section className="relative py-28 md:py-36 px-6">
+    <section className="relative py-16 md:py-24 lg:py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <Reveal>
@@ -342,7 +333,7 @@ function CoursesTeaser() {
                     </p>
 
                     <div className="pt-5 border-t border-white/8">
-                      <p className="font-sub text-[10px] uppercase tracking-[0.22em] text-gray-500 mb-3">
+                      <p className="font-sub text-[10px] uppercase tracking-[0.22em] text-gray-400 mb-3">
                         {c.classes.length} lớp chuyên môn
                       </p>
                       <div className="flex flex-wrap gap-2">
@@ -382,7 +373,7 @@ const features = [
 
 function WhyUs() {
   return (
-    <section className="relative py-28 md:py-36 px-6">
+    <section className="relative py-16 md:py-24 lg:py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <Reveal>

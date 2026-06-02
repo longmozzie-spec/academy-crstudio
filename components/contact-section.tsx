@@ -9,7 +9,7 @@ export function ContactSection() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="relative py-28 md:py-36 px-6 overflow-hidden"
+      className="relative py-16 md:py-24 lg:py-32 px-6 overflow-hidden"
     >
       {/* Aurora */}
       <div className="aurora-blob w-[480px] h-[480px] bg-[#D4A853]/12 -top-32 -left-32" />
@@ -58,7 +58,7 @@ export function ContactSection() {
                   <Phone size={18} className="text-[#D4A853]" />
                 </div>
                 <div className="min-w-0">
-                  <p className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-500 mb-1">
+                  <p className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-400 mb-1">
                     Điện Thoại / Zalo
                   </p>
                   <p className="text-white font-heading text-lg truncate">
@@ -75,7 +75,7 @@ export function ContactSection() {
                   <Mail size={18} className="text-[#D4A853]" />
                 </div>
                 <div className="min-w-0">
-                  <p className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-500 mb-1">
+                  <p className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-400 mb-1">
                     Email
                   </p>
                   <p className="text-white font-heading text-lg truncate">
@@ -94,7 +94,7 @@ export function ContactSection() {
                   <MessageCircle size={18} className="text-[#D4A853]" />
                 </div>
                 <div className="min-w-0">
-                  <p className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-500 mb-1">
+                  <p className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-400 mb-1">
                     Facebook / Messenger
                   </p>
                   <p className="text-white font-heading text-lg truncate">
@@ -108,7 +108,7 @@ export function ContactSection() {
                   <MapPin size={18} className="text-[#D4A853]" />
                 </div>
                 <div className="min-w-0">
-                  <p className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-500 mb-1">
+                  <p className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-400 mb-1">
                     Địa Chỉ
                   </p>
                   <p className="text-white text-sm">
@@ -122,7 +122,7 @@ export function ContactSection() {
                   <Clock size={18} className="text-[#D4A853]" />
                 </div>
                 <div>
-                  <p className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-500 mb-1">
+                  <p className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-400 mb-1">
                     Giờ Hỗ Trợ
                   </p>
                   <p className="text-white text-sm">{site.contact.hours}</p>

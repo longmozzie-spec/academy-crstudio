@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import NextImage from "next/image";
 import Link from "next/link";
 import { ArrowRight, Award, Film, Users, Star, Quote, Sparkles } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
@@ -62,14 +63,12 @@ function StudioLogo({ size = 56 }: { size?: number }) {
 
   return (
     <div className="shrink-0 rounded-xl overflow-hidden bg-white/5 border border-white/10" style={{ width: size, height: size }}>
-      <img
+      <NextImage
         src={studio.logo}
         alt={`${studio.name} logo`}
         width={size}
         height={size}
         className="w-full h-full object-contain"
-        loading="eager"
-        decoding="async"
       />
     </div>
   );
@@ -300,7 +299,7 @@ export default function GiangVienPage() {
                                 className="text-gray-600 group-hover:text-[#D4A853] group-hover:translate-x-0.5 transition-all shrink-0 -rotate-45"
                               />
                             </div>
-                            <p className="font-sub text-gray-500 text-[11px] mb-2 truncate">
+                            <p className="font-sub text-gray-400 text-[11px] mb-2 truncate">
                               {c.handle}
                             </p>
                             <div className="flex items-center gap-4">
@@ -308,7 +307,7 @@ export default function GiangVienPage() {
                                 <span className="font-heading text-[#D4A853] font-bold text-sm">
                                   {c.primary.value}
                                 </span>
-                                <span className="font-sub text-[9px] uppercase tracking-[0.15em] text-gray-500 ml-1">
+                                <span className="font-sub text-[9px] uppercase tracking-[0.15em] text-gray-400 ml-1">
                                   {c.primary.label}
                                 </span>
                               </div>
@@ -317,7 +316,7 @@ export default function GiangVienPage() {
                                 <span className="font-heading text-gray-300 font-bold text-sm">
                                   {c.secondary.value}
                                 </span>
-                                <span className="font-sub text-[9px] uppercase tracking-[0.15em] text-gray-500 ml-1">
+                                <span className="font-sub text-[9px] uppercase tracking-[0.15em] text-gray-400 ml-1">
                                   {c.secondary.label}
                                 </span>
                               </div>
@@ -361,7 +360,7 @@ export default function GiangVienPage() {
       <div className="section-divider mx-6" />
 
       {/* PHILOSOPHY QUOTE */}
-      <section className="relative py-24 md:py-32 px-6">
+      <section className="relative py-14 md:py-20 lg:py-28 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <Reveal>
             <Quote size={48} className="text-[#D4A853]/40 mx-auto mb-8" />
@@ -386,7 +385,7 @@ export default function GiangVienPage() {
       <div className="section-divider mx-6" />
 
       {/* ACHIEVEMENTS */}
-      <section className="relative py-24 md:py-32 px-6">
+      <section className="relative py-14 md:py-20 lg:py-28 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <Reveal>
@@ -473,7 +472,7 @@ export default function GiangVienPage() {
       <div className="section-divider mx-6" />
 
       {/* CTA Portfolio */}
-      <section className="relative py-24 md:py-32 px-6">
+      <section className="relative py-14 md:py-20 lg:py-28 px-6">
         <div className="max-w-4xl mx-auto">
           <Reveal>
             <div className="relative rounded-3xl bg-gradient-to-br from-[#D4A853]/15 via-[#D4A853]/5 to-transparent border-2 border-[#D4A853]/40 p-10 md:p-16 text-center overflow-hidden gold-glow">

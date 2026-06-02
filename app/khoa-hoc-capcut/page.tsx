@@ -154,7 +154,7 @@ function StatCard({ icon: Icon, label, value }: { icon: typeof Video; label: str
   return (
     <div className="glass-card rounded-2xl p-4">
       <Icon size={16} className="text-[#D4A853] mb-2 mx-auto" />
-      <p className="font-sub text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-1">{label}</p>
+      <p className="font-sub text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-1">{label}</p>
       <p className="text-white text-sm font-medium leading-tight">{value}</p>
     </div>
   );
@@ -166,7 +166,7 @@ function StatCard({ icon: Icon, label, value }: { icon: typeof Video; label: str
 function CapcutPrivileges() {
   const icons = [BookOpen, Target, Award, Users];
   return (
-    <section className="py-24 md:py-32 px-6">
+    <section className="py-14 md:py-20 lg:py-28 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14">
           <Reveal>
@@ -218,7 +218,7 @@ function CapcutPrivileges() {
 // ═══════════════════════════════════════════════════════════════════════════
 function CapcutCurriculum() {
   return (
-    <section className="py-24 md:py-32 px-6">
+    <section className="py-14 md:py-20 lg:py-28 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <Reveal>
@@ -276,7 +276,7 @@ function LoginSection({ onLogin }: { onLogin: (s: { email: string; name: string 
   };
 
   return (
-    <section id="video-portal" className="py-24 md:py-32 px-6">
+    <section id="video-portal" className="py-14 md:py-20 lg:py-28 px-6">
       <div className="max-w-md mx-auto">
         <Reveal>
           <div className="text-center mb-8">
@@ -306,7 +306,7 @@ function LoginSection({ onLogin }: { onLogin: (s: { email: string; name: string 
                   Email đăng ký
                 </label>
                 <div className="relative">
-                  <Mail size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" />
+                  <Mail size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
                   <input
                     id="cc-email"
                     type="email"
@@ -325,7 +325,7 @@ function LoginSection({ onLogin }: { onLogin: (s: { email: string; name: string 
                   Mật khẩu
                 </label>
                 <div className="relative">
-                  <KeyRound size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" />
+                  <KeyRound size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
                   <input
                     id="cc-pw"
                     type={showPw ? "text" : "password"}
@@ -339,7 +339,7 @@ function LoginSection({ onLogin }: { onLogin: (s: { email: string; name: string 
                   <button
                     type="button"
                     onClick={() => setShowPw(!showPw)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-[#D4A853] transition-colors p-1.5"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-[#D4A853] transition-colors p-1.5"
                     aria-label={showPw ? "Ẩn mật khẩu" : "Hiện mật khẩu"}
                   >
                     {showPw ? <EyeOff size={16} /> : <Eye size={16} />}
@@ -374,7 +374,7 @@ function LoginSection({ onLogin }: { onLogin: (s: { email: string; name: string 
 
               <div className="flex items-start gap-2.5 pt-2 border-t border-white/5">
                 <ShieldCheck size={13} className="text-[#D4A853]/70 shrink-0 mt-0.5" />
-                <p className="text-gray-500 text-[11px] leading-relaxed">
+                <p className="text-gray-400 text-[11px] leading-relaxed">
                   Nội dung video được bảo vệ bản quyền. Tài khoản gắn liền với email đăng ký — không chia sẻ với người khác.
                 </p>
               </div>
@@ -384,7 +384,7 @@ function LoginSection({ onLogin }: { onLogin: (s: { email: string; name: string 
 
         <Reveal delay={250}>
           <div className="mt-8 text-center">
-            <p className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-500 mb-2">
+            <p className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-400 mb-2">
               Chưa có tài khoản?
             </p>
             <a
@@ -413,7 +413,7 @@ function VideoPortalSection({
   const [activeLesson, setActiveLesson] = useState<VideoLesson>(capcutVideoLibrary[0]);
 
   return (
-    <section id="video-portal" className="py-20 md:py-28 px-6">
+    <section id="video-portal" className="py-12 md:py-18 lg:py-24 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header — welcome + logout */}
         <Reveal>
@@ -428,7 +428,7 @@ function VideoPortalSection({
                 </p>
                 <p className="text-white font-heading text-base truncate">
                   {session.name}{" "}
-                  <span className="text-gray-500 text-xs">· {session.email}</span>
+                  <span className="text-gray-400 text-xs">· {session.email}</span>
                 </p>
               </div>
             </div>
