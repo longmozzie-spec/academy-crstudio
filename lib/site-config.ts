@@ -243,198 +243,6 @@ export const courseCategories: CourseCategory[] = [
       "Lộ trình thực chiến chuyên sâu cho học viên đã có nền tảng — gồm 3 lớp chuyên môn: After Effects nâng cao, Premiere nâng cao và Quay phim thực chiến. Học cùng mentor 1-1 trên dự án thật.",
     classes: [
       {
-        slug: "after-effect",
-        name: "Lớp After Effect Nâng Cao",
-        software: "After Effect",
-        shortName: "After Effect Nâng Cao",
-        tagline: "Motion Graphics chuyên sâu — tích hợp A.I cinematic & VFX",
-        description:
-          "Lộ trình 18 buổi chuyên sâu — tối ưu kiến thức Motion Graphics, đan xen 4 buổi chấm bài thực chiến và tích hợp các công nghệ A.I tiên tiến nhất (Midjourney, Leonardo, Photoshop Generative Fill, Runway Gen-2/Sora, Content-Aware Fill, Roto Brush 3.0 AI) vào quy trình kỹ xảo & chuyển động chuyên nghiệp.",
-        duration: "18 buổi",
-        level: "Trung cấp — Nâng cao",
-        format: "Học online + Mentor kèm cặp",
-        price: "[Học phí]",
-        priceUnit: "VNĐ",
-        // Video giới thiệu khóa & Sản phẩm học viên — để rỗng sẽ hiện placeholder
-        studentWorks: [],
-        features: [
-          "Mentor kèm cặp trong suốt khóa học",
-          "4 lần chấm bài cá nhân (Buổi 4, 7, 11, 16)",
-          "Đồ án tốt nghiệp — TVC 3D / Geolayers / VFX Composite",
-          "Áp dụng A.I thực chiến: Midjourney, Leonardo, Generative Fill, Runway/Sora, Roto Brush 3.0",
-          "Plugin chuyên sâu: Saber, Particular, Geolayers, Element 3D",
-          "Bảo hành kiến thức trọn đời + Cấp chứng nhận tốt nghiệp",
-        ],
-        outcomes: [
-          "Làm chủ Graph Editor & 3 nguyên tắc Motion (Anticipation – Action – Follow through)",
-          "Tạo bộ Key Visual sản phẩm từ A.I và diễn hoạt motion cao cấp",
-          "Dựng không gian 3D, camera Fly-through & TVC commercial ngành F&B",
-          "Geolayers nâng cao: bản đồ BĐS, video chiến dịch lịch sử có 3D model & VFX khói lửa",
-          "Talking Head content + Minimal Style infographic cao cấp",
-          "VFX Tracking 2D/3D, Screen Replacement, Compositing siêu thực",
-          "Rotoscoping tự động & xóa vật thể bằng A.I (Content-Aware Fill, Roto Brush 3.0)",
-          "Render tối ưu + Quy trình nhận dự án VFX chuyên nghiệp",
-        ],
-        modules: [
-          {
-            title: "PHẦN 01 — TƯ DUY CHUYỂN ĐỘNG CHUYÊN SÂU & XỬ LÝ TÀI NGUYÊN BẰNG A.I",
-            lessons: [
-              {
-                title: "Buổi 1: Ôn tập nâng cao Keyframe, Graph Editor & Motion cốt lõi",
-                points: [
-                  "Ôn tập sâu các loại keyframe: Linear, Easy Ease, Hold, Rove Across Time...",
-                  "Làm chủ Graph Editor (Value Graph & Speed Graph) để kiểm soát tốc độ một cách mượt mà nhất.",
-                  "Áp dụng triệt để 3 nguyên tắc Motion cốt lõi: Anticipation (lấy đà) — Action (hành động) — Follow through (quán tính).",
-                  "Thực hành: tạo chuyển động nâng cao cho Logo/Text kết hợp các hiệu ứng cốt lõi (Blur, Glow, CC Light Sweep, Displacement Map...).",
-                ],
-              },
-              {
-                title: "Buổi 2: Tạo tài nguyên Key Visual bằng Generative A.I & Chuẩn hóa Layer",
-                points: [
-                  "Khái niệm Key Visual (KV) động trong truyền thông hiện đại.",
-                  "Ứng dụng A.I: sử dụng Midjourney / Leonardo AI kết hợp Photoshop AI (Generative Fill) để tự lên ý tưởng và tạo một bộ KV sản phẩm cao cấp từ văn bản.",
-                  "Kỹ thuật phân tích bố cục KV, cắt tách layer nhân vật, sản phẩm, background từ Photoshop/Illustrator đưa vào AE một cách khoa học để chuẩn bị làm chuyển động.",
-                ],
-              },
-              {
-                title: "Buổi 3: Thực hành Motion Key Visual với Plugin chuyên sâu",
-                points: [
-                  "Ứng dụng tư duy motion ở Buổi 1 vào bộ tài nguyên KV đã chuẩn bị ở Buổi 2.",
-                  "Làm quen và ứng dụng các hiệu ứng/plugin phổ biến để tạo điểm nhấn: Saber (tạo luồng sáng), Particular (tạo hạt bụi, hiệu ứng thời tiết) hoặc các bộ script hỗ trợ chuyển động nhanh.",
-                ],
-              },
-              {
-                title: "Buổi 4: CHẤM BÀI THỰC HÀNH — Motion Key Visual sản phẩm (Sửa bài số 1)",
-                points: [
-                  "Giảng viên mở trực tiếp file dự án (.aep) của từng học viên để check lỗi sắp xếp layer, độ mượt của đồ thị Graph Editor và cách mix hiệu ứng ánh sáng.",
-                ],
-              },
-            ],
-          },
-          {
-            title: "PHẦN 02 — KHÔNG GIAN 3D & THỰC CHIẾN SẢN XUẤT TVC COMMERCIAL",
-            lessons: [
-              {
-                title: "Buổi 5: Làm việc chuyên sâu với môi trường 3D trong AE",
-                points: [
-                  "Phân biệt rõ tư duy không gian 2D — 2.5D — 3D trong After Effects.",
-                  "Làm chủ hệ thống Camera nâng cao (Camera settings, Depth of field — xóa phông), hệ thống Đèn (Light types, Shadows) và các thông số Material Options của Layer.",
-                  "Thực hành: dựng mô hình không gian 3D cơ bản từ Shape Layer/Extrude và diễn hoạt cú máy Fly-through camera xuyên qua không gian mượt mà.",
-                ],
-              },
-              {
-                title: "Buổi 6: Thực hành dựng TVC quảng cáo — Kết hợp Motion 2D & 3D",
-                points: [
-                  "Quy trình sản xuất một TVC ngắn (10-15s) chuẩn ngành trong AE. Phân tích case-study ngành F&B.",
-                  "Kết hợp khéo léo chuyển động của text 2D, đồ họa vector và model 3D (như lon/chai nước sản phẩm). Thiết lập ánh sáng studio giả lập chiếu lên sản phẩm để tạo độ khối chân thực.",
-                ],
-              },
-              {
-                title: "Buổi 7: CHẤM BÀI THỰC HÀNH — Hoàn thiện TVC 3D Commercial (Sửa bài số 2)",
-                points: [
-                  "Chấm điểm bài tập dựng TVC của học viên: đánh giá bố cục không gian, ánh sáng đổ bóng lên sản phẩm và nhịp điệu chuyển động của camera.",
-                ],
-              },
-            ],
-          },
-          {
-            title: "PHẦN 03 — BẢN ĐỒ KỸ XẢO GEOLAYERS & ỨNG DỤNG HÌNH ẢNH A.I CHUYÊN SÂU",
-            lessons: [
-              {
-                title: "Buổi 8: Geolayers cơ bản & Tối ưu dữ liệu bản đồ cho Bất động sản",
-                points: [
-                  "Giới thiệu chuyên sâu về plugin Geolayers: cách kết nối, tải dữ liệu bản đồ vệ tinh, tạo địa điểm và điều khiển camera trên map.",
-                  "Kỹ thuật tạo đường vẽ tự động (Fly-through bản đồ), highlight tuyến đường giao thông quan trọng và ghim vị trí dự án.",
-                  "Cách thêm marker, icon 3D và text mô tả dự án BĐS.",
-                ],
-              },
-              {
-                title: "Buổi 9: Geolayers nâng cao kết hợp 3D & Hiệu ứng khói lửa (Video chiến tranh/lịch sử)",
-                points: [
-                  "Diễn hoạt Geolayers mức độ khó: tạo hoạt cảnh đường bay quốc tế, bao phủ vùng chiến sự/vùng địa lý lớn, highlight các khu vực giáp ranh.",
-                  "Ứng dụng phối hợp 3D: đưa các model 3D (máy bay, xe tăng, UAV...) vào di chuyển thực tế trên map.",
-                  "Tạo các hiệu ứng cháy nổ, khói bụi (Explosion, fire, smoke) bằng hiệu ứng hạt.",
-                ],
-              },
-              {
-                title: "Buổi 10: Generative A.I tạo chất liệu địa hình (Terrain) cho Bản đồ",
-                points: [
-                  "Ứng dụng A.I (Runway Gen-2 / Sora / Midjourney): tạo các texture bề mặt địa hình thực tế (đồi núi, mây phủ góc nhìn từ trên cao, hiệu ứng thời tiết giả lập) để đắp (Map) vào môi trường 3D trong AE, tạo độ chân thực mà bản đồ thường không có.",
-                ],
-              },
-              {
-                title: "Buổi 11: CHẤM BÀI THỰC HÀNH — Video mô phỏng chiến dịch / BĐS 3D (Sửa bài số 3)",
-                points: [
-                  "Kiểm tra chuyển động camera trên bản đồ của học viên có bị giật hay không.",
-                  "Sửa lỗi hiển thị của các layer text/icon khi camera thay đổi góc nhìn (Perspective).",
-                ],
-              },
-            ],
-          },
-          {
-            title: "PHẦN 04 — THỰC CHIẾN TALKING HEAD CONTENT & PHONG CÁCH MINIMAL",
-            lessons: [
-              {
-                title: "Buổi 12: Xử lý Talking Head Content giàu thông tin trực quan",
-                points: [
-                  "Cách thiết lập quy trình làm việc với video dạng Talking Head (vlogger, chuyên gia nói).",
-                  "Kỹ thuật thiết kế kịch bản chuyển động chữ (Pop-in text, Slide-in text), chèn hình ảnh minh họa đè lên cảnh quay một cách thông minh mà không gây rối mắt.",
-                ],
-              },
-              {
-                title: "Buổi 13: Làm chủ phong cách Minimal Style (xu hướng Infographic cao cấp)",
-                points: [
-                  "Phân tích ngôn ngữ thiết kế Minimal: nền trơn, font chữ tối giản, chuyển động thanh lịch và có tính toán.",
-                  "Ứng dụng nâng cao của Mask và Track Matte để tạo các đường chuyển cảnh (Transitions) mượt mà, tinh tế giữa các phân đoạn kiến thức trong video.",
-                  "Tinh chỉnh màu sắc đồng bộ.",
-                ],
-              },
-            ],
-          },
-          {
-            title: "PHẦN 05 — VFX: COMPOSITING, TRACKING CHUYÊN SÂU & ĐỒ ÁN TỐT NGHIỆP",
-            lessons: [
-              {
-                title: "Buổi 14: VFX Tracking 2D, 3D & Screen Replacement",
-                points: [
-                  "Kỹ thuật Track Motion 2D chuyên sâu và ứng dụng vào việc thay thế màn hình điện thoại/máy tính (Screen replacement).",
-                  "Kỹ thuật 3D Camera Tracking: phân tích cảnh quay thật ngoài đời để giải mã chuyển động camera, từ đó gắn các văn bản (Text 3D) hoặc mô hình (Model 3D) cố định vào không gian của cảnh quay thật.",
-                ],
-              },
-              {
-                title: "Buổi 15: Composite nâng cao & Xóa vật thể bằng Adobe A.I",
-                points: [
-                  "Sử dụng Mask kết hợp Track Matte để lồng ghép nhiều lớp video (Compositing) tạo ra một khung cảnh siêu thực hoàn chỉnh.",
-                  "Ứng dụng A.I tích hợp (Content-Aware Fill trong AE / Roto Brush 3.0 AI): sử dụng công nghệ A.I để tự động nhận diện, bóc tách nhân vật chuyển động phức tạp (Rotoscoping) cực nhanh hoặc xóa bỏ hoàn toàn các vật thể thừa khỏi cảnh quay video thô chỉ trong vài cú click.",
-                ],
-              },
-              {
-                title: "Buổi 16: CHẤM BÀI THỰC HÀNH — Kỹ xảo VFX Composite & Tracking (Sửa bài số 4)",
-                points: [
-                  "Học viên nộp bài tập tích hợp phần tử đồ họa vào footage quay đời thực.",
-                  "Giảng viên chỉnh sửa chi tiết lỗi lệch tracking, lỗi đổ màu (Color Matching) khiến vật thể ghép bị giả so với môi trường gốc.",
-                ],
-              },
-              {
-                title: "Buổi 17: CHẤM ĐỒ ÁN TỐT NGHIỆP — Phần 1",
-                points: [
-                  "Học viên thuyết trình về tác phẩm kỹ xảo cuối khóa (một đoạn phim ngắn, một TVC 3D hoành tráng hoặc một video Infographic bản đồ có ứng dụng quy trình A.I).",
-                  "Giảng viên bóc tách timeline, tối ưu hóa các lớp hiệu ứng và đưa ra phương án chỉnh sửa chi tiết.",
-                ],
-              },
-              {
-                title: "Buổi 18: TỔNG KẾT ĐỒ ÁN & Quy trình hậu kỳ chuyên nghiệp",
-                points: [
-                  "Nghiệm thu sản phẩm cuối cùng (Final Video) sau khi đã sửa lỗi ở buổi trước.",
-                  "Chia sẻ kỹ thuật Render tối ưu dung lượng và chất lượng phần cứng, quy trình tối ưu cache để AE chạy mượt.",
-                  "Chia sẻ kinh nghiệm nhận dự án kỹ xảo VFX chuyên nghiệp và trao chứng nhận tốt nghiệp.",
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
         slug: "premiere",
         name: "Lớp Premiere Nâng Cao",
         software: "Premiere",
@@ -625,6 +433,198 @@ export const courseCategories: CourseCategory[] = [
                   "Học viên nộp bản sửa cuối cùng (Final Video) sau khi tiếp thu ý kiến từ Buổi 17.",
                   "Giảng viên chia sẻ quy trình làm việc thực tế với khách hàng, cách quản lý file dự án lớn để bàn giao, tư duy tự nghiên cứu nâng cao tay nghề.",
                   "Trao chứng nhận hoàn thành khóa học.",
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        slug: "after-effect",
+        name: "Lớp After Effect Nâng Cao",
+        software: "After Effect",
+        shortName: "After Effect Nâng Cao",
+        tagline: "Motion Graphics chuyên sâu — tích hợp A.I cinematic & VFX",
+        description:
+          "Lộ trình 18 buổi chuyên sâu — tối ưu kiến thức Motion Graphics, đan xen 4 buổi chấm bài thực chiến và tích hợp các công nghệ A.I tiên tiến nhất (Midjourney, Leonardo, Photoshop Generative Fill, Runway Gen-2/Sora, Content-Aware Fill, Roto Brush 3.0 AI) vào quy trình kỹ xảo & chuyển động chuyên nghiệp.",
+        duration: "18 buổi",
+        level: "Trung cấp — Nâng cao",
+        format: "Học online + Mentor kèm cặp",
+        price: "[Học phí]",
+        priceUnit: "VNĐ",
+        // Video giới thiệu khóa & Sản phẩm học viên — để rỗng sẽ hiện placeholder
+        studentWorks: [],
+        features: [
+          "Mentor kèm cặp trong suốt khóa học",
+          "4 lần chấm bài cá nhân (Buổi 4, 7, 11, 16)",
+          "Đồ án tốt nghiệp — TVC 3D / Geolayers / VFX Composite",
+          "Áp dụng A.I thực chiến: Midjourney, Leonardo, Generative Fill, Runway/Sora, Roto Brush 3.0",
+          "Plugin chuyên sâu: Saber, Particular, Geolayers, Element 3D",
+          "Bảo hành kiến thức trọn đời + Cấp chứng nhận tốt nghiệp",
+        ],
+        outcomes: [
+          "Làm chủ Graph Editor & 3 nguyên tắc Motion (Anticipation – Action – Follow through)",
+          "Tạo bộ Key Visual sản phẩm từ A.I và diễn hoạt motion cao cấp",
+          "Dựng không gian 3D, camera Fly-through & TVC commercial ngành F&B",
+          "Geolayers nâng cao: bản đồ BĐS, video chiến dịch lịch sử có 3D model & VFX khói lửa",
+          "Talking Head content + Minimal Style infographic cao cấp",
+          "VFX Tracking 2D/3D, Screen Replacement, Compositing siêu thực",
+          "Rotoscoping tự động & xóa vật thể bằng A.I (Content-Aware Fill, Roto Brush 3.0)",
+          "Render tối ưu + Quy trình nhận dự án VFX chuyên nghiệp",
+        ],
+        modules: [
+          {
+            title: "PHẦN 01 — TƯ DUY CHUYỂN ĐỘNG CHUYÊN SÂU & XỬ LÝ TÀI NGUYÊN BẰNG A.I",
+            lessons: [
+              {
+                title: "Buổi 1: Ôn tập nâng cao Keyframe, Graph Editor & Motion cốt lõi",
+                points: [
+                  "Ôn tập sâu các loại keyframe: Linear, Easy Ease, Hold, Rove Across Time...",
+                  "Làm chủ Graph Editor (Value Graph & Speed Graph) để kiểm soát tốc độ một cách mượt mà nhất.",
+                  "Áp dụng triệt để 3 nguyên tắc Motion cốt lõi: Anticipation (lấy đà) — Action (hành động) — Follow through (quán tính).",
+                  "Thực hành: tạo chuyển động nâng cao cho Logo/Text kết hợp các hiệu ứng cốt lõi (Blur, Glow, CC Light Sweep, Displacement Map...).",
+                ],
+              },
+              {
+                title: "Buổi 2: Tạo tài nguyên Key Visual bằng Generative A.I & Chuẩn hóa Layer",
+                points: [
+                  "Khái niệm Key Visual (KV) động trong truyền thông hiện đại.",
+                  "Ứng dụng A.I: sử dụng Midjourney / Leonardo AI kết hợp Photoshop AI (Generative Fill) để tự lên ý tưởng và tạo một bộ KV sản phẩm cao cấp từ văn bản.",
+                  "Kỹ thuật phân tích bố cục KV, cắt tách layer nhân vật, sản phẩm, background từ Photoshop/Illustrator đưa vào AE một cách khoa học để chuẩn bị làm chuyển động.",
+                ],
+              },
+              {
+                title: "Buổi 3: Thực hành Motion Key Visual với Plugin chuyên sâu",
+                points: [
+                  "Ứng dụng tư duy motion ở Buổi 1 vào bộ tài nguyên KV đã chuẩn bị ở Buổi 2.",
+                  "Làm quen và ứng dụng các hiệu ứng/plugin phổ biến để tạo điểm nhấn: Saber (tạo luồng sáng), Particular (tạo hạt bụi, hiệu ứng thời tiết) hoặc các bộ script hỗ trợ chuyển động nhanh.",
+                ],
+              },
+              {
+                title: "Buổi 4: CHẤM BÀI THỰC HÀNH — Motion Key Visual sản phẩm (Sửa bài số 1)",
+                points: [
+                  "Giảng viên mở trực tiếp file dự án (.aep) của từng học viên để check lỗi sắp xếp layer, độ mượt của đồ thị Graph Editor và cách mix hiệu ứng ánh sáng.",
+                ],
+              },
+            ],
+          },
+          {
+            title: "PHẦN 02 — KHÔNG GIAN 3D & THỰC CHIẾN SẢN XUẤT TVC COMMERCIAL",
+            lessons: [
+              {
+                title: "Buổi 5: Làm việc chuyên sâu với môi trường 3D trong AE",
+                points: [
+                  "Phân biệt rõ tư duy không gian 2D — 2.5D — 3D trong After Effects.",
+                  "Làm chủ hệ thống Camera nâng cao (Camera settings, Depth of field — xóa phông), hệ thống Đèn (Light types, Shadows) và các thông số Material Options của Layer.",
+                  "Thực hành: dựng mô hình không gian 3D cơ bản từ Shape Layer/Extrude và diễn hoạt cú máy Fly-through camera xuyên qua không gian mượt mà.",
+                ],
+              },
+              {
+                title: "Buổi 6: Thực hành dựng TVC quảng cáo — Kết hợp Motion 2D & 3D",
+                points: [
+                  "Quy trình sản xuất một TVC ngắn (10-15s) chuẩn ngành trong AE. Phân tích case-study ngành F&B.",
+                  "Kết hợp khéo léo chuyển động của text 2D, đồ họa vector và model 3D (như lon/chai nước sản phẩm). Thiết lập ánh sáng studio giả lập chiếu lên sản phẩm để tạo độ khối chân thực.",
+                ],
+              },
+              {
+                title: "Buổi 7: CHẤM BÀI THỰC HÀNH — Hoàn thiện TVC 3D Commercial (Sửa bài số 2)",
+                points: [
+                  "Chấm điểm bài tập dựng TVC của học viên: đánh giá bố cục không gian, ánh sáng đổ bóng lên sản phẩm và nhịp điệu chuyển động của camera.",
+                ],
+              },
+            ],
+          },
+          {
+            title: "PHẦN 03 — BẢN ĐỒ KỸ XẢO GEOLAYERS & ỨNG DỤNG HÌNH ẢNH A.I CHUYÊN SÂU",
+            lessons: [
+              {
+                title: "Buổi 8: Geolayers cơ bản & Tối ưu dữ liệu bản đồ cho Bất động sản",
+                points: [
+                  "Giới thiệu chuyên sâu về plugin Geolayers: cách kết nối, tải dữ liệu bản đồ vệ tinh, tạo địa điểm và điều khiển camera trên map.",
+                  "Kỹ thuật tạo đường vẽ tự động (Fly-through bản đồ), highlight tuyến đường giao thông quan trọng và ghim vị trí dự án.",
+                  "Cách thêm marker, icon 3D và text mô tả dự án BĐS.",
+                ],
+              },
+              {
+                title: "Buổi 9: Geolayers nâng cao kết hợp 3D & Hiệu ứng khói lửa (Video chiến tranh/lịch sử)",
+                points: [
+                  "Diễn hoạt Geolayers mức độ khó: tạo hoạt cảnh đường bay quốc tế, bao phủ vùng chiến sự/vùng địa lý lớn, highlight các khu vực giáp ranh.",
+                  "Ứng dụng phối hợp 3D: đưa các model 3D (máy bay, xe tăng, UAV...) vào di chuyển thực tế trên map.",
+                  "Tạo các hiệu ứng cháy nổ, khói bụi (Explosion, fire, smoke) bằng hiệu ứng hạt.",
+                ],
+              },
+              {
+                title: "Buổi 10: Generative A.I tạo chất liệu địa hình (Terrain) cho Bản đồ",
+                points: [
+                  "Ứng dụng A.I (Runway Gen-2 / Sora / Midjourney): tạo các texture bề mặt địa hình thực tế (đồi núi, mây phủ góc nhìn từ trên cao, hiệu ứng thời tiết giả lập) để đắp (Map) vào môi trường 3D trong AE, tạo độ chân thực mà bản đồ thường không có.",
+                ],
+              },
+              {
+                title: "Buổi 11: CHẤM BÀI THỰC HÀNH — Video mô phỏng chiến dịch / BĐS 3D (Sửa bài số 3)",
+                points: [
+                  "Kiểm tra chuyển động camera trên bản đồ của học viên có bị giật hay không.",
+                  "Sửa lỗi hiển thị của các layer text/icon khi camera thay đổi góc nhìn (Perspective).",
+                ],
+              },
+            ],
+          },
+          {
+            title: "PHẦN 04 — THỰC CHIẾN TALKING HEAD CONTENT & PHONG CÁCH MINIMAL",
+            lessons: [
+              {
+                title: "Buổi 12: Xử lý Talking Head Content giàu thông tin trực quan",
+                points: [
+                  "Cách thiết lập quy trình làm việc với video dạng Talking Head (vlogger, chuyên gia nói).",
+                  "Kỹ thuật thiết kế kịch bản chuyển động chữ (Pop-in text, Slide-in text), chèn hình ảnh minh họa đè lên cảnh quay một cách thông minh mà không gây rối mắt.",
+                ],
+              },
+              {
+                title: "Buổi 13: Làm chủ phong cách Minimal Style (xu hướng Infographic cao cấp)",
+                points: [
+                  "Phân tích ngôn ngữ thiết kế Minimal: nền trơn, font chữ tối giản, chuyển động thanh lịch và có tính toán.",
+                  "Ứng dụng nâng cao của Mask và Track Matte để tạo các đường chuyển cảnh (Transitions) mượt mà, tinh tế giữa các phân đoạn kiến thức trong video.",
+                  "Tinh chỉnh màu sắc đồng bộ.",
+                ],
+              },
+            ],
+          },
+          {
+            title: "PHẦN 05 — VFX: COMPOSITING, TRACKING CHUYÊN SÂU & ĐỒ ÁN TỐT NGHIỆP",
+            lessons: [
+              {
+                title: "Buổi 14: VFX Tracking 2D, 3D & Screen Replacement",
+                points: [
+                  "Kỹ thuật Track Motion 2D chuyên sâu và ứng dụng vào việc thay thế màn hình điện thoại/máy tính (Screen replacement).",
+                  "Kỹ thuật 3D Camera Tracking: phân tích cảnh quay thật ngoài đời để giải mã chuyển động camera, từ đó gắn các văn bản (Text 3D) hoặc mô hình (Model 3D) cố định vào không gian của cảnh quay thật.",
+                ],
+              },
+              {
+                title: "Buổi 15: Composite nâng cao & Xóa vật thể bằng Adobe A.I",
+                points: [
+                  "Sử dụng Mask kết hợp Track Matte để lồng ghép nhiều lớp video (Compositing) tạo ra một khung cảnh siêu thực hoàn chỉnh.",
+                  "Ứng dụng A.I tích hợp (Content-Aware Fill trong AE / Roto Brush 3.0 AI): sử dụng công nghệ A.I để tự động nhận diện, bóc tách nhân vật chuyển động phức tạp (Rotoscoping) cực nhanh hoặc xóa bỏ hoàn toàn các vật thể thừa khỏi cảnh quay video thô chỉ trong vài cú click.",
+                ],
+              },
+              {
+                title: "Buổi 16: CHẤM BÀI THỰC HÀNH — Kỹ xảo VFX Composite & Tracking (Sửa bài số 4)",
+                points: [
+                  "Học viên nộp bài tập tích hợp phần tử đồ họa vào footage quay đời thực.",
+                  "Giảng viên chỉnh sửa chi tiết lỗi lệch tracking, lỗi đổ màu (Color Matching) khiến vật thể ghép bị giả so với môi trường gốc.",
+                ],
+              },
+              {
+                title: "Buổi 17: CHẤM ĐỒ ÁN TỐT NGHIỆP — Phần 1",
+                points: [
+                  "Học viên thuyết trình về tác phẩm kỹ xảo cuối khóa (một đoạn phim ngắn, một TVC 3D hoành tráng hoặc một video Infographic bản đồ có ứng dụng quy trình A.I).",
+                  "Giảng viên bóc tách timeline, tối ưu hóa các lớp hiệu ứng và đưa ra phương án chỉnh sửa chi tiết.",
+                ],
+              },
+              {
+                title: "Buổi 18: TỔNG KẾT ĐỒ ÁN & Quy trình hậu kỳ chuyên nghiệp",
+                points: [
+                  "Nghiệm thu sản phẩm cuối cùng (Final Video) sau khi đã sửa lỗi ở buổi trước.",
+                  "Chia sẻ kỹ thuật Render tối ưu dung lượng và chất lượng phần cứng, quy trình tối ưu cache để AE chạy mượt.",
+                  "Chia sẻ kinh nghiệm nhận dự án kỹ xảo VFX chuyên nghiệp và trao chứng nhận tốt nghiệp.",
                 ],
               },
             ],
