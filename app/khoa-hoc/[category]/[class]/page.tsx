@@ -10,6 +10,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { ContactSection } from "@/components/contact-section";
 import { LessonSlider } from "@/components/lesson-slider";
 import { CurriculumAccordion } from "@/components/curriculum-accordion";
+import { AutoPlayYouTube } from "@/components/ui/auto-play-youtube";
 import { findClass } from "@/lib/site-config";
 
 const softwareIcon = {
@@ -283,13 +284,10 @@ export default function ClassDetailPage() {
                 }}
               >
                 {cls.introVideoYoutubeId ? (
-                  <iframe
-                    src={`https://www.youtube.com/embed/${cls.introVideoYoutubeId}?rel=0&modestbranding=1`}
+                  <AutoPlayYouTube
+                    youtubeId={cls.introVideoYoutubeId}
                     title={`Video giới thiệu ${cls.name}`}
-                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full"
-                    style={{ border: 0 }}
+                    className="absolute inset-0"
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#1a1a1a] to-[#050505]">
