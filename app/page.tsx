@@ -11,6 +11,7 @@ import { InstructorPhoto } from "@/components/instructor-photo";
 import { HeroBackground } from "@/components/hero-background";
 import { HeroSignaturePanel } from "@/components/hero-signature";
 import { HeroGridAccent } from "@/components/ui/hero-grid-accent";
+import { ElegantShapesBackground } from "@/components/ui/elegant-shapes";
 import { site, featuredVideos, courseCategories, stats, Video } from "@/lib/site-config";
 
 // ─── HERO ──────────────────────────────────────────────────────────────────────
@@ -22,6 +23,9 @@ function Hero() {
 
       {/* Grid + radial accent — thay shader cũ */}
       <HeroGridAccent />
+
+      {/* Floating gradient shapes — gold/amber/emerald, animate float + rotate */}
+      <ElegantShapesBackground />
 
       {/* Aurora backgrounds (luôn hiện, đè lên ảnh nền + threads) */}
       <div className="aurora-blob w-[700px] h-[700px] bg-[#D4A853]/20 -top-40 -right-40" />
