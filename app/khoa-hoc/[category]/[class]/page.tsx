@@ -246,6 +246,82 @@ export default function ClassDetailPage() {
 
       <div className="section-divider mx-6" />
 
+      {/* INTRO VIDEO — chỉ render nếu lớp có khai báo introVideoYoutubeId (kể cả rỗng) */}
+      {cls.introVideoYoutubeId !== undefined && (
+        <section className="py-20 md:py-28 px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <Reveal>
+                <div className="flex items-center gap-3 justify-center mb-5">
+                  <div className="w-10 h-px" style={{ background: accent }} />
+                  <span
+                    className="font-sub text-xs uppercase tracking-[0.3em]"
+                    style={{ color: accent }}
+                  >
+                    Video Giới Thiệu
+                  </span>
+                  <div className="w-10 h-px" style={{ background: accent }} />
+                </div>
+              </Reveal>
+              <Reveal delay={100}>
+                <h2
+                  className="font-heading text-white"
+                  style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.5rem)", lineHeight: 1.2 }}
+                >
+                  Trailer <span className="italic" style={{ color: accent }}>Khóa Học</span>
+                </h2>
+              </Reveal>
+            </div>
+
+            <Reveal delay={200}>
+              <div
+                className="relative rounded-3xl overflow-hidden border aspect-video"
+                style={{
+                  borderColor: `${accent}35`,
+                  background: `linear-gradient(180deg, ${accent}08, transparent)`,
+                  boxShadow: `0 0 30px ${accent}15`,
+                }}
+              >
+                {cls.introVideoYoutubeId ? (
+                  <iframe
+                    src={`https://www.youtube.com/embed/${cls.introVideoYoutubeId}?rel=0&modestbranding=1`}
+                    title={`Video giới thiệu ${cls.name}`}
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                    style={{ border: 0 }}
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#1a1a1a] to-[#050505]">
+                    <div className="text-center px-8">
+                      <PlayCircle size={56} style={{ color: accent }} className="mx-auto mb-4 opacity-60" />
+                      <p
+                        className="font-sub text-xs uppercase tracking-[0.25em] mb-2"
+                        style={{ color: accent }}
+                      >
+                        Video Trailer
+                      </p>
+                      <p className="text-gray-400 text-sm max-w-md mx-auto">
+                        Video giới thiệu khóa &ldquo;<span className="text-white">{cls.name}</span>&rdquo; sẽ sớm được cập nhật.
+                      </p>
+                      <p className="text-gray-600 text-[11px] mt-3">
+                        Dev: thêm YouTube ID vào{" "}
+                        <code className="text-[#D4A853] bg-black/40 px-1.5 py-0.5 rounded">
+                          introVideoYoutubeId
+                        </code>{" "}
+                        trong site-config.ts
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {cls.introVideoYoutubeId !== undefined && <div className="section-divider mx-6" />}
+
       {/* OUTCOMES */}
       {cls.outcomes && cls.outcomes.length > 0 && (
         <section className="py-20 md:py-28 px-6">
@@ -321,6 +397,122 @@ export default function ClassDetailPage() {
       )}
 
       <div className="section-divider mx-6" />
+
+      {/* STUDENT WORKS — sản phẩm của học viên trong lớp */}
+      {cls.studentWorks !== undefined && (
+        <section className="py-20 md:py-28 px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <Reveal>
+                <div className="flex items-center gap-3 justify-center mb-5">
+                  <div className="w-10 h-px" style={{ background: accent }} />
+                  <span className="font-sub text-xs uppercase tracking-[0.3em]" style={{ color: accent }}>
+                    Sản Phẩm Học Viên
+                  </span>
+                  <div className="w-10 h-px" style={{ background: accent }} />
+                </div>
+              </Reveal>
+              <Reveal delay={100}>
+                <h2
+                  className="font-heading text-white"
+                  style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)", lineHeight: 1.15 }}
+                >
+                  Tinh Hoa <span className="italic" style={{ color: accent }}>Từ Học Trò</span>
+                </h2>
+              </Reveal>
+              <Reveal delay={200}>
+                <p className="text-gray-400 max-w-2xl mx-auto mt-4 text-sm md:text-base">
+                  Những bài tốt nghiệp xuất sắc của học viên — minh chứng cho lộ trình thực chiến của khóa.
+                </p>
+              </Reveal>
+            </div>
+
+            {cls.studentWorks.length > 0 ? (
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {cls.studentWorks.map((w, i) => {
+                  const youtubeThumb = w.youtubeId ? `https://i.ytimg.com/vi/${w.youtubeId}/hqdefault.jpg` : undefined;
+                  const thumb = w.thumb ?? youtubeThumb;
+                  const link = w.youtubeId
+                    ? `https://www.youtube.com/watch?v=${w.youtubeId}`
+                    : w.facebookUrl ?? "#";
+
+                  return (
+                    <Reveal key={w.id} delay={(i % 3) * 80}>
+                      <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group glass-card rounded-2xl overflow-hidden block transition-transform duration-500 hover:-translate-y-1"
+                      >
+                        <div className="aspect-video relative overflow-hidden bg-gradient-to-br from-[#1a1a1a] to-[#050505]">
+                          {thumb ? (
+                            <img
+                              src={thumb}
+                              alt={w.title}
+                              loading="lazy"
+                              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
+                          ) : (
+                            <div className="absolute inset-0 flex items-center justify-center">
+                              <PlayCircle size={36} style={{ color: accent }} className="opacity-50" />
+                            </div>
+                          )}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/30 pointer-events-none" />
+                          <div className="absolute bottom-0 left-0 right-0 p-4">
+                            <p className="font-heading text-white text-base leading-tight">{w.title}</p>
+                            {w.studentName && (
+                              <p className="font-sub text-[10px] uppercase tracking-[0.2em] mt-1" style={{ color: accent }}>
+                                {w.studentName}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      </a>
+                    </Reveal>
+                  );
+                })}
+              </div>
+            ) : (
+              // Placeholder grid khi chưa có sản phẩm — 6 khung mờ
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[1, 2, 3, 4, 5, 6].map((i) => (
+                  <Reveal key={i} delay={(i % 3) * 60}>
+                    <div
+                      className="aspect-video rounded-2xl border border-dashed flex items-center justify-center"
+                      style={{
+                        borderColor: `${accent}25`,
+                        background: `linear-gradient(180deg, ${accent}04, transparent)`,
+                      }}
+                    >
+                      <div className="text-center px-4">
+                        <PlayCircle size={28} style={{ color: `${accent}55` }} className="mx-auto mb-2" />
+                        <p className="font-sub text-[10px] uppercase tracking-[0.22em]" style={{ color: `${accent}90` }}>
+                          Sản phẩm #{String(i).padStart(2, "0")}
+                        </p>
+                        <p className="text-gray-600 text-[11px] mt-1">Sẽ cập nhật</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            )}
+
+            {cls.studentWorks.length === 0 && (
+              <div className="mt-8 text-center">
+                <p className="text-gray-600 text-[11px] font-sub uppercase tracking-[0.22em]">
+                  Dev: thêm vào{" "}
+                  <code className="text-[#D4A853] bg-black/40 px-1.5 py-0.5 rounded normal-case tracking-normal">
+                    studentWorks: [...]
+                  </code>{" "}
+                  trong site-config.ts
+                </p>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {cls.studentWorks !== undefined && <div className="section-divider mx-6" />}
 
       {/* OTHER CLASSES */}
       {otherClasses.length > 0 && (

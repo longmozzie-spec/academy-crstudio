@@ -10,7 +10,7 @@ import { ContactSection } from "@/components/contact-section";
 import { InstructorPhoto } from "@/components/instructor-photo";
 import { HeroBackground } from "@/components/hero-background";
 import { HeroSignaturePanel } from "@/components/hero-signature";
-import { DigitalLoomCanvas } from "@/components/ui/digital-loom-canvas";
+import { HeroGridAccent } from "@/components/ui/hero-grid-accent";
 import { site, featuredVideos, courseCategories, stats, Video } from "@/lib/site-config";
 
 // ─── HERO ──────────────────────────────────────────────────────────────────────
@@ -20,12 +20,8 @@ function Hero() {
       {/* Hero background image — appears only if file exists at public/brand/hero-bg.jpg */}
       <HeroBackground />
 
-      {/* Digital Loom — sợi gold dệt subtle phía sau aurora */}
-      <DigitalLoomCanvas
-        threadColor="rgba(212, 168, 83, 0.28)"
-        threadCount={45}
-        trailOpacity={0.04}
-      />
+      {/* Grid + radial accent — thay shader cũ */}
+      <HeroGridAccent />
 
       {/* Aurora backgrounds (luôn hiện, đè lên ảnh nền + threads) */}
       <div className="aurora-blob w-[700px] h-[700px] bg-[#D4A853]/20 -top-40 -right-40" />

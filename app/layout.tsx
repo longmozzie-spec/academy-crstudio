@@ -5,7 +5,6 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { FloatingConsult } from "@/components/floating-consult";
 import { ThemeProvider } from "@/components/theme-provider";
-import { DottedSurface } from "@/components/ui/dotted-surface";
 
 const playfair = Playfair_Display({
   variable: "--font-heading",
@@ -77,9 +76,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           forcedTheme="dark"
           enableSystem={false}
         >
-          {/* Global dotted surface background — Three.js dots sóng dệt phía sau toàn site */}
-          <DottedSurface />
-
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />

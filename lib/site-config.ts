@@ -131,9 +131,20 @@ export type CourseClass = {
   price?: string;
   priceUnit?: string;
   sessions?: LessonSession[];    // Cho lớp 0đ — danh sách buổi video
+  introVideoYoutubeId?: string;  // Video giới thiệu khóa học (placeholder nếu rỗng)
+  studentWorks?: StudentWork[];  // Sản phẩm tốt nghiệp của học viên trong lớp
   features?: string[];           // Quyền lợi (chỉ dùng cho lớp nâng cao)
   outcomes?: string[];
   modules?: { title: string; lessons: CourseLesson[] }[];
+};
+
+export type StudentWork = {
+  id: string;
+  title: string;
+  studentName?: string;
+  youtubeId?: string;
+  facebookUrl?: string;
+  thumb?: string;          // Đường dẫn ảnh thumb tự custom
 };
 
 export type CourseCategory = {
@@ -244,6 +255,8 @@ export const courseCategories: CourseCategory[] = [
         format: "Học online + Mentor kèm cặp",
         price: "[Học phí]",
         priceUnit: "VNĐ",
+        // Video giới thiệu khóa & Sản phẩm học viên — để rỗng sẽ hiện placeholder
+        studentWorks: [],
         features: [
           "Mentor kèm cặp trong suốt khóa học",
           "4 lần chấm bài cá nhân (Buổi 4, 7, 11, 16)",
@@ -434,6 +447,9 @@ export const courseCategories: CourseCategory[] = [
         format: "Học online + Mentor kèm cặp",
         price: "[Học phí]",
         priceUnit: "VNĐ",
+        // Video giới thiệu khóa & Sản phẩm học viên
+        introVideoYoutubeId: "",
+        studentWorks: [],
         features: [
           "Mentor kèm cặp trong suốt khóa học",
           "Chấm bài cá nhân 3 lần trong khóa (Buổi 4, 8, 12)",
@@ -628,6 +644,9 @@ export const courseCategories: CourseCategory[] = [
         format: "Học trực tiếp + Thực hành đi quay",
         price: "[Học phí]",
         priceUnit: "VNĐ",
+        // Video giới thiệu khóa & Sản phẩm học viên
+        introVideoYoutubeId: "",
+        studentWorks: [],
         features: [
           "Mentor kèm cặp trong suốt khóa học",
           "Đi quay thực tế tại bối cảnh ngoài cùng giảng viên",
