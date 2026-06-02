@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #f0ede8;
+  --gold: #D4A853;
+  --gold-light: #F0C870;
+  --gold-deep: #B8902E;
+  --emerald: #2F7D5B;
+  --emerald-light: #4FAE7E;
+  --ink: #060606;
+  --paper: #f5f2ec;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-emerald: var(--emerald);
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Body text dùng Montserrat (alias từ --font-sub) — tương đương SVN-Montserrat */
+  --font-body: var(--font-sub);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-weight: 400; /* Regular — gốc body */
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Heading dùng Playfair Display — tương đương SVN-Playfair Display */
+h1 {
+  font-family: var(--font-heading), Georgia, serif;
+  letter-spacing: -0.01em;
+  font-weight: 700; /* Bold */
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), Georgia, serif;
+  font-weight: 700;
+}
+
+/* Sub-heading utility — Montserrat Medium/SemiBold uppercase */
+.font-sub {
+  font-family: var(--font-sub), system-ui, sans-serif;
+  font-weight: 500;
+}
+
+/* Body font utility */
+.font-body {
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* Heading font utility */
+.font-heading {
+  font-family: var(--font-heading), Georgia, serif;
+}
+
+/* Body light variant */
+.font-body-light {
+  font-weight: 300;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #111; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--gold), var(--gold-deep));
+  border-radius: 3px;
+}
+
+/* Gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #D4A853 0%, #F0C870 50%, #D4A853 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.shimmer-text {
+  background: linear-gradient(90deg, #D4A853 0%, #F0C870 25%, #D4A853 50%, #F0C870 75%, #D4A853 100%);
+  background-size: 200% auto;
+  animation: shimmer 4s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 168, 83, 0.18);
+  transition: border-color 300ms ease, transform 300ms ease, background 300ms ease;
+}
+.glass-card:hover {
+  border-color: rgba(212, 168, 83, 0.45);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Gold border glow */
+.gold-glow {
+  box-shadow: 0 0 24px rgba(212, 168, 83, 0.25), 0 0 60px rgba(212, 168, 83, 0.08);
+}
+.gold-glow-strong {
+  box-shadow: 0 0 30px rgba(240, 200, 112, 0.5), 0 0 80px rgba(212, 168, 83, 0.25);
+}
+
+/* Section divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 168, 83, 0.4), transparent);
+}
+
+/* Number badge */
+.number-badge {
+  background: linear-gradient(135deg, rgba(212, 168, 83, 0.2), rgba(212, 168, 83, 0.05));
+  border: 1px solid rgba(212, 168, 83, 0.4);
+}
+
+/* Animated underline link */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.link-underline:hover::after { width: 100%; }
+
+/* Floating CTA pulse */
+@keyframes pulseGold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(240, 200, 112, 0.55), 0 8px 30px rgba(212, 168, 83, 0.35); }
+  50% { box-shadow: 0 0 0 14px rgba(240, 200, 112, 0), 0 8px 30px rgba(212, 168, 83, 0.5); }
+}
+.cta-pulse { animation: pulseGold 2.6s ease-in-out infinite; }
+
+/* Hero grain */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='3' /></filter><rect width='100%' height='100%' filter='url(%23n)' /></svg>");
+}
+
+/* Aurora background animation */
+@keyframes auroraDrift {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+  33% { transform: translate(40px, -30px) scale(1.1); opacity: 0.65; }
+  66% { transform: translate(-30px, 20px) scale(0.95); opacity: 0.45; }
+}
+.aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  animation: auroraDrift 18s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Fade swap */
+@keyframes fadeSwap {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Letter reveal */
+@keyframes letterUp {
+  from { opacity: 0; transform: translateY(40%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrolling marquee */
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 35s linear infinite;
+}
+
+/* Disable selection on decorative numbers */
+.deco-number {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Course card emerald variant */
+.emerald-glow {
+  box-shadow: 0 0 24px rgba(79, 174, 126, 0.18), 0 0 60px rgba(47, 125, 91, 0.08);
+}
+.text-emerald-gradient {
+  background: linear-gradient(135deg, #2F7D5B 0%, #4FAE7E 50%, #2F7D5B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
