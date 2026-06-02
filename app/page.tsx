@@ -41,27 +41,52 @@ function Hero() {
         <div className="grid lg:grid-cols-[7fr_5fr] gap-12 lg:gap-20 items-center">
           {/* LEFT — Editorial copy */}
           <div>
+            {/* Eyebrow — pill chip với chevron, gold-tinted */}
             <Reveal>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-px bg-[#D4A853]" />
-                <span className="font-sub text-[#D4A853] text-[11px] uppercase tracking-[0.35em]">
-                  10 Năm Bảo Chứng Chất Lượng
-                </span>
-              </div>
+              <a
+                href="/giang-vien"
+                className="group inline-flex items-center gap-2 mb-6 px-5 py-2
+                  bg-gradient-to-tr from-[#D4A853]/12 via-[#D4A853]/6 to-transparent
+                  border-2 border-[#D4A853]/20 hover:border-[#D4A853]/45
+                  rounded-3xl tracking-tight uppercase
+                  font-sub text-[11px] text-[#D4A853]/95
+                  transition-colors duration-300"
+              >
+                10 Năm Bảo Chứng Chất Lượng
+                <ChevronRight
+                  size={14}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </a>
             </Reveal>
 
+            {/* Title — chữ trắng gradient fade dần sang trong suốt, "Thước Phim" gold gradient italic */}
             <Reveal delay={120}>
               <h1
-                className="font-heading text-white mb-6"
+                className="font-heading mb-6"
                 style={{
                   fontSize: "clamp(2.5rem, 7vw, 5.5rem)",
                   lineHeight: 1.05,
                   letterSpacing: "-0.015em",
+                  background: "linear-gradient(to bottom right, #ffffff 30%, rgba(255,255,255,0.45))",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
                 }}
               >
                 Kể Chuyện Bằng
                 <br />
-                <span className="text-gold-gradient italic">Thước Phim</span>
+                <span
+                  className="italic"
+                  style={{
+                    background: "linear-gradient(135deg, #D4A853 0%, #F0C870 50%, #D4A853 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  Thước Phim
+                </span>
               </h1>
             </Reveal>
 
