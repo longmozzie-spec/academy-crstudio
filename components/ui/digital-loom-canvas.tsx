@@ -34,7 +34,7 @@ export function DigitalLoomCanvas({
     if (!ctx) return;
 
     let threads: Thread[] = [];
-    let animId: number;
+    let animId: number = 0;
     let width: number, height: number;
 
     class Thread {
