@@ -49,7 +49,7 @@ function Hero() {
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-px bg-[#D4A853]" />
                 <span className="font-sub text-[#D4A853] text-[11px] uppercase tracking-[0.35em]">
-                  Kể Chuyện Bằng Thước Phim
+                  10 Năm Bảo Chứng Chất Lượng
                 </span>
               </div>
             </Reveal>
@@ -63,11 +63,9 @@ function Hero() {
                   letterSpacing: "-0.015em",
                 }}
               >
-                Tinh Hoa
+                Kể Chuyện Bằng
                 <br />
-                <span className="text-gold-gradient italic">Hậu Kỳ</span>
-                <br />
-                Cinematic
+                <span className="text-gold-gradient italic">Thước Phim</span>
               </h1>
             </Reveal>
 
