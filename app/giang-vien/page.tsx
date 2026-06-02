@@ -332,13 +332,15 @@ export default function GiangVienPage() {
 
               <Reveal delay={500}>
                 <div className="flex flex-wrap gap-4">
-                  <Link
-                    href="/du-an"
+                  <a
+                    href="https://crstudio.vn"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-[#F0C870] to-[#D4A853] hover:from-[#FAD58A] hover:to-[#E5B860] text-black font-bold px-7 py-4 rounded-full transition-all duration-200 cursor-pointer"
                   >
                     Xem Portfolio
-                    <ArrowRight size={16} />
-                  </Link>
+                    <ArrowRight size={16} className="-rotate-45" />
+                  </a>
                   <a
                     href="#contact"
                     onClick={(e) => {
@@ -486,15 +488,17 @@ export default function GiangVienPage() {
                   Xem Toàn Bộ <span className="text-gold-gradient italic">Portfolio</span>
                 </h2>
                 <p className="text-gray-300 max-w-xl mx-auto mb-8">
-                  Khám phá hơn 200 dự án thực tế mà giảng viên đã thực hiện cùng các bài tốt nghiệp tinh tuyển của học viên.
+                  Khám phá hơn 200 dự án thực tế tại CR Studio — studio chuyên dựng video bất động sản cao cấp do giảng viên sáng lập.
                 </p>
-                <Link
-                  href="/du-an"
+                <a
+                  href="https://crstudio.vn"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-[#F0C870] to-[#D4A853] hover:from-[#FAD58A] hover:to-[#E5B860] text-black font-bold px-7 py-4 rounded-full transition-all duration-200 cursor-pointer"
                 >
-                  Vào Trang Dự Án
-                  <ArrowRight size={16} />
-                </Link>
+                  Vào CR Studio
+                  <ArrowRight size={16} className="-rotate-45" />
+                </a>
               </div>
             </div>
           </Reveal>

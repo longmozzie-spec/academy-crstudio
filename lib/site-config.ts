@@ -97,12 +97,12 @@ export const allProjects: Video[] = [
   { id: "s15", facebookUrl: "https://www.facebook.com/reel/2325529391219666", thumb: "/thumbnails/students/s15.jpg", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #15" },
 ];
 
-// 4 video tinh tuyển hiện trên trang chủ
+// 4 video tinh tuyển hiện trên trang chủ — 2 bài AE + 2 bài Premiere của học viên
 export const featuredVideos: Video[] = [
-  allProjects[0],  // Penthouse 170 Tỷ — flagship
-  allProjects[2],  // The Crest Residence — international/English appeal
-  allProjects[5],  // Grand Marina — Căn Hộ Triệu Đô
-  allProjects[6],  // Zeit River với Trinh Lee — có nhân vật
+  { id: "f-ae-01", title: "Bài Tốt Nghiệp AE — Nguyễn Trường Giang", youtubeId: "QE7q6jUZhdM", author: "student", category: "After Effects" },
+  { id: "f-ae-02", title: "Bài Tốt Nghiệp AE — Tạ Đức Thành",         youtubeId: "5QojX43LNrc", author: "student", category: "After Effects" },
+  { id: "f-pr-01", title: "Bài Tốt Nghiệp Premiere — Trần Ngọc Tuấn Bảo", youtubeId: "40UrxhMmnTU", author: "student", category: "Premiere" },
+  { id: "f-pr-02", title: "Bài Tốt Nghiệp Premiere — Lê Văn Sơn",         youtubeId: "-GbxK-CSGU0", author: "student", category: "Premiere" },
 ];
 
 // ─── COURSE TYPES ─────────────────────────────────────────────────────────────
@@ -256,8 +256,13 @@ export const courseCategories: CourseCategory[] = [
         price: "[Học phí]",
         priceUnit: "VNĐ",
         // Video giới thiệu khóa & Sản phẩm học viên
-        introVideoYoutubeId: "",
-        studentWorks: [],
+        introVideoYoutubeId: "44OkJSzyv70",
+        studentWorks: [
+          { id: "pr-w01", title: "Bài Tốt Nghiệp Premiere Nâng Cao", studentName: "Trần Ngọc Tuấn Bảo", youtubeId: "40UrxhMmnTU" },
+          { id: "pr-w02", title: "Bài Tốt Nghiệp Premiere Nâng Cao", studentName: "Lê Văn Sơn",         youtubeId: "-GbxK-CSGU0" },
+          { id: "pr-w03", title: "Bài Tốt Nghiệp Premiere Nâng Cao", studentName: "Nguyễn Thanh Hà",    youtubeId: "jDO15M5mGzM" },
+          { id: "pr-w04", title: "Bài Tốt Nghiệp Premiere Nâng Cao", studentName: "Tìa Phương Thanh",   youtubeId: "SH9bLio0Fw8" },
+        ],
         features: [
           "Mentor kèm cặp trong suốt khóa học",
           "Chấm bài cá nhân 3 lần trong khóa (Buổi 4, 8, 12)",
@@ -452,8 +457,13 @@ export const courseCategories: CourseCategory[] = [
         format: "Học online + Mentor kèm cặp",
         price: "[Học phí]",
         priceUnit: "VNĐ",
-        // Video giới thiệu khóa & Sản phẩm học viên — để rỗng sẽ hiện placeholder
-        studentWorks: [],
+        // Sản phẩm học viên (lớp này KHÔNG có intro video)
+        studentWorks: [
+          { id: "ae-w01", title: "Bài Tốt Nghiệp After Effects Nâng Cao", studentName: "Nguyễn Trường Giang", youtubeId: "QE7q6jUZhdM" },
+          { id: "ae-w02", title: "Bài Tốt Nghiệp After Effects Nâng Cao", studentName: "Tạ Đức Thành",        youtubeId: "5QojX43LNrc" },
+          { id: "ae-w03", title: "Bài Tốt Nghiệp After Effects Nâng Cao", studentName: "Trần Ngọc Tuấn Bảo",  youtubeId: "KZ_mxJchIYg" },
+          { id: "ae-w04", title: "Bài Tốt Nghiệp After Effects Nâng Cao", studentName: "Lâm Nhựt Huy",        youtubeId: "htbq64hWf4E" },
+        ],
         features: [
           "Mentor kèm cặp trong suốt khóa học",
           "4 lần chấm bài cá nhân (Buổi 4, 7, 11, 16)",
@@ -645,8 +655,13 @@ export const courseCategories: CourseCategory[] = [
         price: "[Học phí]",
         priceUnit: "VNĐ",
         // Video giới thiệu khóa & Sản phẩm học viên
-        introVideoYoutubeId: "",
-        studentWorks: [],
+        introVideoYoutubeId: "ymgjtQWDSTw",
+        studentWorks: [
+          { id: "qp-w01", title: "Bài Tốt Nghiệp Quay Phim Thực Chiến", studentName: "Khánh Duy",       youtubeId: "IFjIM_FjhvQ" },
+          { id: "qp-w02", title: "Bài Tốt Nghiệp Quay Phim Thực Chiến", studentName: "Trung Hổ",       youtubeId: "5M0oKDE1FdY" },
+          { id: "qp-w03", title: "Bài Tốt Nghiệp Quay Phim Thực Chiến", studentName: "Phương Thanh",   youtubeId: "f7aUDr3IzyA" },
+          { id: "qp-w04", title: "Bài Tốt Nghiệp Quay Phim Thực Chiến", studentName: "Hải Long",       youtubeId: "8e2tIE69uMc" },
+        ],
         features: [
           "Mentor kèm cặp trong suốt khóa học",
           "Đi quay thực tế tại bối cảnh ngoài cùng giảng viên",
