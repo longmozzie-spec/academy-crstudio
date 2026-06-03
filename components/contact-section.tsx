@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone, Mail, Clock, MapPin, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
 import { site } from "@/lib/site-config";
 
@@ -117,17 +117,6 @@ export function ContactSection() {
                 </div>
               </div>
 
-              <div className="glass-card rounded-2xl p-5 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#D4A853]/15 flex items-center justify-center">
-                  <Clock size={18} className="text-[#D4A853]" />
-                </div>
-                <div>
-                  <p className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-400 mb-1">
-                    Giờ Hỗ Trợ
-                  </p>
-                  <p className="text-white text-sm">{site.contact.hours}</p>
-                </div>
-              </div>
             </div>
           </Reveal>
         </div>

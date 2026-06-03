@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, Clock } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import { site, courseCategories } from "@/lib/site-config";
 import { BrandLogo } from "@/components/brand-logo";
 
@@ -108,10 +108,6 @@ export function Footer() {
                 <Mail size={14} className="text-[#D4A853] shrink-0" />
                 {site.contact.email}
               </a>
-            </li>
-            <li className="text-gray-400 flex items-center gap-2">
-              <Clock size={14} className="text-[#D4A853] shrink-0" />
-              {site.contact.hours}
             </li>
           </ul>
         </div>
