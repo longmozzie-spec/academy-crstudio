@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Khóa Học — Lộ Trình Hậu Kỳ Cinematic Chuyên Sâu",
   description:
-    "2 nhánh khóa học: Nhập môn 0Đ (Premiere + After Effect) và Nâng Cao (Premiere, After Effects, Quay Phim Thực Chiến) — học cùng mentor 1-1.",
+    "2 nhánh khóa học: Nhập môn 0 Đồng (Premiere + After Effect) và Nâng Cao (Premiere, After Effects, Quay Phim Thực Chiến) — học cùng mentor 1-1.",
   openGraph: {
     title: "Khóa Học — Lộ Trình Hậu Kỳ Cinematic",
     description: "Premiere · After Effects · Quay Phim Thực Chiến — mentor kèm cặp.",

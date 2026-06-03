@@ -162,7 +162,7 @@ export const courseCategories: CourseCategory[] = [
     id: "co-ban",
     slug: "co-ban",
     variant: "free",
-    name: "Khóa Học 0Đ",
+    name: "Khóa Học 0 Đồng",
     badge: "0đ",
     subtitle: "Hành trình nhập môn miễn phí",
     description:
@@ -170,9 +170,9 @@ export const courseCategories: CourseCategory[] = [
     classes: [
       {
         slug: "premiere",
-        name: "Lớp Premiere 0Đ",
+        name: "Lớp Premiere 0 Đồng",
         software: "Premiere",
-        shortName: "Premiere 0Đ",
+        shortName: "Premiere 0 Đồng",
         tagline: "Nhập môn dựng phim cùng Adobe Premiere Pro",
         description:
           "Lớp học miễn phí dành cho người chưa từng dựng phim — giúp bạn làm quen với giao diện Premiere, hiểu nguyên lý cắt dựng và tự tay dựng một video hoàn chỉnh.",
@@ -200,9 +200,9 @@ export const courseCategories: CourseCategory[] = [
       },
       {
         slug: "after-effect",
-        name: "Lớp After Effect 0Đ",
+        name: "Lớp After Effect 0 Đồng",
         software: "After Effect",
-        shortName: "After Effect 0Đ",
+        shortName: "After Effect 0 Đồng",
         tagline: "Nhập môn motion graphics cùng After Effects",
         description:
           "Lớp học miễn phí dành cho người mới làm quen với After Effects — từ thao tác cơ bản đến tạo những hiệu ứng text & motion đơn giản nhưng tinh tế.",
