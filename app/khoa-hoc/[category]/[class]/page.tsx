@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useParams, notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,7 +13,8 @@ import { ContactSection } from "@/components/contact-section";
 import { LessonSlider } from "@/components/lesson-slider";
 import { CurriculumAccordion } from "@/components/curriculum-accordion";
 import { AutoPlayYouTube } from "@/components/ui/auto-play-youtube";
-import { findClass } from "@/lib/site-config";
+import { VideoModal } from "@/components/ui/video-modal";
+import { findClass, type StudentWork } from "@/lib/site-config";
 
 const softwareIcon = {
   Premiere: Film,
@@ -38,6 +40,9 @@ export default function ClassDetailPage() {
 
   // Sibling classes (other classes in the same category) for "Next class" recommendation
   const otherClasses = category.classes.filter((c) => c.slug !== cls.slug);
+
+  // State cho video modal sản phẩm học viên (player ngay trên web)
+  const [activeWork, setActiveWork] = useState<StudentWork | null>(null);
 
   return (
     <>
@@ -437,17 +442,14 @@ export default function ClassDetailPage() {
                 {cls.studentWorks.map((w, i) => {
                   const youtubeThumb = w.youtubeId ? `https://i.ytimg.com/vi/${w.youtubeId}/hqdefault.jpg` : undefined;
                   const thumb = w.thumb ?? youtubeThumb;
-                  const link = w.youtubeId
-                    ? `https://www.youtube.com/watch?v=${w.youtubeId}`
-                    : w.facebookUrl ?? "#";
 
                   return (
                     <Reveal key={w.id} delay={(i % 3) * 80}>
-                      <a
-                        href={link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group glass-card rounded-2xl overflow-hidden block transition-transform duration-500 hover:-translate-y-1"
+                      <button
+                        type="button"
+                        onClick={() => setActiveWork(w)}
+                        aria-label={`Phát video: ${w.title}`}
+                        className="group glass-card rounded-2xl overflow-hidden block w-full text-left transition-transform duration-500 hover:-translate-y-1 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A853]"
                       >
                         <div className="aspect-video relative overflow-hidden bg-gradient-to-br from-[#1a1a1a] to-[#050505]">
                           {thumb ? (
@@ -464,6 +466,17 @@ export default function ClassDetailPage() {
                             </div>
                           )}
                           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/30 pointer-events-none" />
+
+                          {/* Play button overlay */}
+                          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <div
+                              className="w-14 h-14 rounded-full bg-black/60 backdrop-blur-sm border-2 flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                              style={{ borderColor: `${accent}b3`, background: `${accent}40` }}
+                            >
+                              <PlayCircle size={22} style={{ color: "#fff" }} fill="currentColor" />
+                            </div>
+                          </div>
+
                           <div className="absolute bottom-0 left-0 right-0 p-4">
                             <p className="font-heading text-white text-base leading-tight">{w.title}</p>
                             {w.studentName && (
@@ -473,7 +486,7 @@ export default function ClassDetailPage() {
                             )}
                           </div>
                         </div>
-                      </a>
+                      </button>
                     </Reveal>
                   );
                 })}
@@ -579,6 +592,16 @@ export default function ClassDetailPage() {
 
       {/* CONTACT — only show for advanced classes (free classes don't need consult per user request) */}
       {!isFree && <ContactSection />}
+
+      {/* Video modal — phát sản phẩm học viên ngay trên web (KHÔNG redirect YouTube) */}
+      <VideoModal
+        key={activeWork?.id}
+        youtubeId={activeWork?.youtubeId}
+        facebookUrl={activeWork?.facebookUrl}
+        isShort={false}
+        isOpen={activeWork !== null}
+        onClose={() => setActiveWork(null)}
+      />
     </>
   );
 }
