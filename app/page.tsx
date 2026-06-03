@@ -11,6 +11,7 @@ import { InstructorPhoto } from "@/components/instructor-photo";
 import { HeroBackground } from "@/components/hero-background";
 import { HeroSignaturePanel } from "@/components/hero-signature";
 import { ElegantShapesBackground } from "@/components/ui/elegant-shapes";
+import { BeamsBackgroundLayer } from "@/components/ui/beams-background";
 import { site, featuredVideos, courseCategories, stats, Video } from "@/lib/site-config";
 
 // ─── HERO ──────────────────────────────────────────────────────────────────────
@@ -19,6 +20,9 @@ function Hero() {
     <section className="relative min-h-screen flex items-center overflow-hidden grain pt-24">
       {/* Hero background image — appears only if file exists at public/brand/hero-bg.jpg */}
       <HeroBackground />
+
+      {/* Beams animated canvas — gold/amber beams chuyển động dọc */}
+      <BeamsBackgroundLayer intensity="subtle" beamCount={18} />
 
       {/* Floating gradient shapes — gold/amber/emerald, animate float + rotate */}
       <ElegantShapesBackground />
