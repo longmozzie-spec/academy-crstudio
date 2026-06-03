@@ -39,7 +39,7 @@ export function LessonSlider({ sessions, accent, accent2, className = "" }: Less
 
   return (
     <div
-      className={`relative rounded-3xl overflow-hidden border ${className}`}
+      className={`relative rounded-3xl overflow-hidden border max-w-full ${className}`}
       style={{
         borderColor: `${accent}40`,
         background: `linear-gradient(180deg, ${accent}10, transparent)`,
@@ -80,21 +80,21 @@ export function LessonSlider({ sessions, accent, accent2, className = "" }: Less
       </div>
 
       {/* Top control bar */}
-      <div className="flex items-center justify-between gap-4 px-5 py-4 bg-black/60 border-t" style={{ borderColor: `${accent}25` }}>
-        <div className="flex items-center gap-3 min-w-0 flex-1">
+      <div className="flex items-center justify-between gap-2 sm:gap-4 px-3 sm:px-5 py-3 sm:py-4 bg-black/60 border-t" style={{ borderColor: `${accent}25` }}>
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1 overflow-hidden">
           <PlayCircle size={18} className="shrink-0" style={{ color: accent }} />
-          <div className="min-w-0">
-            <p className="font-sub text-[10px] uppercase tracking-[0.25em] text-gray-400 mb-0.5">
+          <div className="min-w-0 overflow-hidden">
+            <p className="font-sub text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-gray-400 mb-0.5">
               Đang phát
             </p>
-            <p className="text-white font-heading text-sm truncate">{active.title}</p>
+            <p className="text-white font-heading text-xs sm:text-sm truncate">{active.title}</p>
           </div>
         </div>
 
         {/* Counter + arrows */}
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           <span
-            className="font-heading text-sm tabular-nums px-3 py-1.5 rounded-full border whitespace-nowrap"
+            className="font-heading text-xs sm:text-sm tabular-nums px-2 sm:px-3 py-1 sm:py-1.5 rounded-full border whitespace-nowrap"
             style={{
               borderColor: `${accent}40`,
               background: `${accent}10`,
@@ -102,7 +102,7 @@ export function LessonSlider({ sessions, accent, accent2, className = "" }: Less
             }}
           >
             <span className="font-bold">{String(index + 1).padStart(2, "0")}</span>
-            <span className="text-gray-600 mx-1.5">/</span>
+            <span className="text-gray-600 mx-1 sm:mx-1.5">/</span>
             <span className="text-gray-400">{String(total).padStart(2, "0")}</span>
           </span>
           {total > 1 && (
@@ -110,26 +110,26 @@ export function LessonSlider({ sessions, accent, accent2, className = "" }: Less
               <button
                 onClick={prev}
                 aria-label="Buổi trước"
-                className="w-9 h-9 rounded-full border flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 shrink-0"
                 style={{
                   borderColor: `${accent}40`,
                   color: accent,
                   background: `${accent}08`,
                 }}
               >
-                <ChevronLeft size={16} />
+                <ChevronLeft size={14} className="sm:w-4 sm:h-4" />
               </button>
               <button
                 onClick={next}
                 aria-label="Buổi kế tiếp"
-                className="w-9 h-9 rounded-full border flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 shrink-0"
                 style={{
                   borderColor: `${accent}40`,
                   color: accent,
                   background: `${accent}08`,
                 }}
               >
-                <ChevronRight size={16} />
+                <ChevronRight size={14} className="sm:w-4 sm:h-4" />
               </button>
             </>
           )}
@@ -138,7 +138,7 @@ export function LessonSlider({ sessions, accent, accent2, className = "" }: Less
 
       {/* Session list */}
       {total > 1 && (
-        <div className="px-5 py-5 border-t" style={{ borderColor: `${accent}20`, background: "rgba(0,0,0,0.4)" }}>
+        <div className="px-3 sm:px-5 py-4 sm:py-5 border-t" style={{ borderColor: `${accent}20`, background: "rgba(0,0,0,0.4)" }}>
           <div className="flex items-center gap-2 mb-4">
             <ListVideo size={14} style={{ color: accent }} />
             <p className="font-sub text-[10px] uppercase tracking-[0.25em]" style={{ color: accent }}>

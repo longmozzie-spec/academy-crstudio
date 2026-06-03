@@ -208,13 +208,15 @@ export const courseCategories: CourseCategory[] = [
         tagline: "Nhập môn motion graphics cùng After Effects",
         description:
           "Lớp học miễn phí dành cho người mới làm quen với After Effects — từ thao tác cơ bản đến tạo những hiệu ứng text & motion đơn giản nhưng tinh tế.",
-        duration: "3 buổi",
+        duration: "5 buổi",
         level: "Người mới",
         format: "Học video — Xem mọi lúc",
         sessions: [
-          { id: "01", title: "Buổi 1 — Khởi động After Effects",     youtubeId: "i3E3dUOI3pE", startSeconds: 6266 },
-          { id: "02", title: "Buổi 2 — Keyframe & Animation",        youtubeId: "tmwRI2DtuLc" },
-          { id: "03", title: "Buổi 3 — Text Animation thực hành",    youtubeId: "gH9K112F8xQ", startSeconds: 1611 },
+          { id: "01", title: "Buổi 1 — Khởi động After Effects",          youtubeId: "i3E3dUOI3pE", startSeconds: 6266 },
+          { id: "02", title: "Buổi 2 — Keyframe & Animation",             youtubeId: "tmwRI2DtuLc" },
+          { id: "03", title: "Buổi 3 — Text Animation thực hành",         youtubeId: "gH9K112F8xQ", startSeconds: 1611 },
+          { id: "04", title: "Buổi 4 — Geolayers 3 · Bản đồ động (P.1)",  youtubeId: "-_Yy3zzl9FY" },
+          { id: "05", title: "Buổi 5 — Geolayers 3 · Bản đồ động (P.2)",  youtubeId: "aX-Plv4jEaw" },
         ],
         outcomes: [
           "Hiểu giao diện & workflow After Effects",

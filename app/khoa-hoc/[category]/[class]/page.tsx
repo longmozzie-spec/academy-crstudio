@@ -65,7 +65,7 @@ export default function ClassDetailPage() {
             </div>
           </Reveal>
 
-          <div className="grid lg:grid-cols-[7fr_5fr] gap-12 lg:gap-16 items-start">
+          <div className="grid lg:grid-cols-[7fr_5fr] gap-12 lg:gap-16 items-start min-w-0">
             {/* LEFT — Intro */}
             <div>
               <Reveal delay={100}>
