@@ -130,7 +130,7 @@ export default function GiangVienPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative pt-40 pb-24 px-6 overflow-hidden">
+      <section className="relative pt-40 pb-24 px-4 sm:px-6 overflow-hidden">
         <div className="aurora-blob w-[700px] h-[700px] bg-[#D4A853]/15 -top-40 -right-40" />
         <div className="aurora-blob w-[500px] h-[500px] bg-[#2F7D5B]/8 bottom-0 left-0" style={{ animationDelay: "-7s" }} />
 
@@ -266,7 +266,7 @@ export default function GiangVienPage() {
                     </span>
                   </div>
 
-                  <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {socialChannels.map((c) => {
                       const isYT = c.platform === "youtube";
                       return (
@@ -360,7 +360,7 @@ export default function GiangVienPage() {
       <div className="section-divider mx-6" />
 
       {/* PHILOSOPHY QUOTE */}
-      <section className="relative py-14 md:py-20 lg:py-28 px-6">
+      <section className="relative py-14 md:py-20 lg:py-28 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
           <Reveal>
             <Quote size={48} className="text-[#D4A853]/40 mx-auto mb-8" />
@@ -385,7 +385,7 @@ export default function GiangVienPage() {
       <div className="section-divider mx-6" />
 
       {/* ACHIEVEMENTS */}
-      <section className="relative py-14 md:py-20 lg:py-28 px-6">
+      <section className="relative py-14 md:py-20 lg:py-28 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <Reveal>
@@ -400,17 +400,17 @@ export default function GiangVienPage() {
             <Reveal delay={100}>
               <h2
                 className="font-heading text-white"
-                style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)", lineHeight: 1.15 }}
+                style={{ fontSize: "clamp(1.5rem, 4vw, 3rem)", lineHeight: 1.15 }}
               >
                 Một Thập Kỷ <span className="text-gold-gradient italic">Tận Hiến</span>
               </h2>
             </Reveal>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-20">
             {achievements.map((a, i) => (
               <Reveal key={a.label} delay={i * 100}>
-                <div className="glass-card rounded-2xl p-7 text-center">
+                <div className="glass-card rounded-2xl p-5 sm:p-7 text-center">
                   <div className="w-14 h-14 rounded-2xl bg-[#D4A853]/10 border border-[#D4A853]/25 flex items-center justify-center mx-auto mb-5">
                     <a.icon size={22} className="text-[#D4A853]" />
                   </div>
@@ -449,7 +449,7 @@ export default function GiangVienPage() {
             </Reveal>
 
             <Reveal delay={150}>
-              <div className="grid sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {expertise.map((e, i) => (
                   <div
                     key={e}
@@ -472,10 +472,10 @@ export default function GiangVienPage() {
       <div className="section-divider mx-6" />
 
       {/* CTA Portfolio */}
-      <section className="relative py-14 md:py-20 lg:py-28 px-6">
+      <section className="relative py-14 md:py-20 lg:py-28 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <Reveal>
-            <div className="relative rounded-3xl bg-gradient-to-br from-[#D4A853]/15 via-[#D4A853]/5 to-transparent border-2 border-[#D4A853]/40 p-10 md:p-16 text-center overflow-hidden gold-glow">
+            <div className="relative rounded-3xl bg-gradient-to-br from-[#D4A853]/15 via-[#D4A853]/5 to-transparent border-2 border-[#D4A853]/40 p-6 sm:p-10 md:p-16 text-center overflow-hidden gold-glow">
               <div className="aurora-blob w-[400px] h-[400px] bg-[#D4A853]/15 -top-20 -right-20" />
 
               <div className="relative">

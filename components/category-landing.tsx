@@ -19,7 +19,7 @@ export function CategoryLanding({ category }: { category: CourseCategory }) {
   return (
     <>
       {/* HERO */}
-      <section className="relative pt-40 pb-20 px-6 overflow-hidden">
+      <section className="relative pt-40 pb-20 px-4 sm:px-6 overflow-hidden">
         <div
           className="aurora-blob w-[700px] h-[700px] top-0 -right-32"
           style={{ background: `${accent}22` }}
@@ -46,7 +46,7 @@ export function CategoryLanding({ category }: { category: CourseCategory }) {
           <Reveal delay={100}>
             <h1
               className="font-heading text-white mb-6"
-              style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)", lineHeight: 1.05 }}
+              style={{ fontSize: "clamp(1.85rem, 6vw, 5rem)", lineHeight: 1.05 }}
             >
               {isFree ? (
                 <>
@@ -92,7 +92,7 @@ export function CategoryLanding({ category }: { category: CourseCategory }) {
       <div className="section-divider mx-6" />
 
       {/* CLASSES GRID */}
-      <section className="py-14 md:py-20 lg:py-28 px-6">
+      <section className="py-14 md:py-20 lg:py-28 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
             <Reveal>
@@ -107,7 +107,7 @@ export function CategoryLanding({ category }: { category: CourseCategory }) {
             <Reveal delay={100}>
               <h2
                 className="font-heading text-white"
-                style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)", lineHeight: 1.15 }}
+                style={{ fontSize: "clamp(1.5rem, 4vw, 3rem)", lineHeight: 1.15 }}
               >
                 Chọn Lộ Trình <span className="italic" style={{ color: accent }}>Phù Hợp</span>
               </h2>
@@ -127,7 +127,7 @@ export function CategoryLanding({ category }: { category: CourseCategory }) {
                 <Reveal key={cls.slug} delay={i * 120}>
                   <Link
                     href={`/khoa-hoc/${category.slug}/${cls.slug}`}
-                    className="group block relative rounded-3xl p-7 md:p-8 h-full transition-all duration-500 hover:-translate-y-1 glass-card overflow-hidden"
+                    className="group block relative rounded-3xl p-5 sm:p-7 md:p-8 h-full transition-all duration-500 hover:-translate-y-1 glass-card overflow-hidden"
                     style={{ borderColor: `${accent}30` }}
                   >
                     {/* Background blob */}

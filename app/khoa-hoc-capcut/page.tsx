@@ -69,7 +69,7 @@ function CapcutHero({ session }: { session: { email: string; name: string } | nu
   };
 
   return (
-    <section className="relative pt-40 pb-20 px-6 overflow-hidden">
+    <section className="relative pt-40 pb-20 px-4 sm:px-6 overflow-hidden">
       <div className="aurora-blob w-[700px] h-[700px] bg-[#D4A853]/15 -top-40 -right-32" />
       <div className="aurora-blob w-[500px] h-[500px] bg-[#4FAE7E]/8 bottom-0 -left-32" style={{ animationDelay: "-7s" }} />
 
@@ -86,7 +86,7 @@ function CapcutHero({ session }: { session: { email: string; name: string } | nu
         <Reveal delay={100}>
           <h1
             className="font-heading text-white mb-6"
-            style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)", lineHeight: 1.05 }}
+            style={{ fontSize: "clamp(1.85rem, 6vw, 5rem)", lineHeight: 1.05 }}
           >
             CapCut <span className="text-gold-gradient italic">Pro Creator</span>
             <br />
@@ -120,7 +120,7 @@ function CapcutHero({ session }: { session: { email: string; name: string } | nu
         </Reveal>
 
         <Reveal delay={400}>
-          <div className="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-10">
             <StatCard icon={Video} label="Thời lượng" value={capcutCourse.duration} />
             <StatCard icon={Award} label="Đầu ra" value="Portfolio 5–7 video" />
             <StatCard icon={Sparkles} label="Workflow" value="Tích hợp A.I 300%" />
@@ -166,7 +166,7 @@ function StatCard({ icon: Icon, label, value }: { icon: typeof Video; label: str
 function CapcutPrivileges() {
   const icons = [BookOpen, Target, Award, Users];
   return (
-    <section className="py-14 md:py-20 lg:py-28 px-6">
+    <section className="py-14 md:py-20 lg:py-28 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14">
           <Reveal>
@@ -179,7 +179,7 @@ function CapcutPrivileges() {
             </div>
           </Reveal>
           <Reveal delay={100}>
-            <h2 className="font-heading text-white" style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)", lineHeight: 1.15 }}>
+            <h2 className="font-heading text-white" style={{ fontSize: "clamp(1.5rem, 4vw, 3rem)", lineHeight: 1.15 }}>
               Khóa Học <span className="text-gold-gradient italic">Đồng Nhất</span>, Không Phân Cấp
             </h2>
           </Reveal>
@@ -195,7 +195,7 @@ function CapcutPrivileges() {
             const Icon = icons[i] ?? Sparkles;
             return (
               <Reveal key={i} delay={i * 100}>
-                <div className="glass-card rounded-2xl p-6 md:p-7 h-full flex gap-5">
+                <div className="glass-card rounded-2xl p-6 md:p-5 sm:p-7 h-full flex gap-5">
                   <div className="w-12 h-12 rounded-xl bg-[#D4A853]/15 border border-[#D4A853]/30 flex items-center justify-center shrink-0">
                     <Icon size={20} className="text-[#D4A853]" />
                   </div>
@@ -218,7 +218,7 @@ function CapcutPrivileges() {
 // ═══════════════════════════════════════════════════════════════════════════
 function CapcutCurriculum() {
   return (
-    <section className="py-14 md:py-20 lg:py-28 px-6">
+    <section className="py-14 md:py-20 lg:py-28 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <Reveal>
@@ -231,7 +231,7 @@ function CapcutCurriculum() {
             </div>
           </Reveal>
           <Reveal delay={100}>
-            <h2 className="font-heading text-white" style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)", lineHeight: 1.15 }}>
+            <h2 className="font-heading text-white" style={{ fontSize: "clamp(1.5rem, 4vw, 3rem)", lineHeight: 1.15 }}>
               Lộ Trình <span className="text-gold-gradient italic">Thực Chiến</span>
             </h2>
           </Reveal>
@@ -276,7 +276,7 @@ function LoginSection({ onLogin }: { onLogin: (s: { email: string; name: string 
   };
 
   return (
-    <section id="video-portal" className="py-14 md:py-20 lg:py-28 px-6">
+    <section id="video-portal" className="py-14 md:py-20 lg:py-28 px-4 sm:px-6">
       <div className="max-w-md mx-auto">
         <Reveal>
           <div className="text-center mb-8">
@@ -298,7 +298,7 @@ function LoginSection({ onLogin }: { onLogin: (s: { email: string; name: string 
         <Reveal delay={150}>
           <form
             onSubmit={onSubmit}
-            className="glass-card rounded-3xl p-7 md:p-8 gold-glow"
+            className="glass-card rounded-3xl p-5 sm:p-7 md:p-8 gold-glow"
           >
             <div className="space-y-5">
               <div>
@@ -413,7 +413,7 @@ function VideoPortalSection({
   const [activeLesson, setActiveLesson] = useState<VideoLesson>(capcutVideoLibrary[0]);
 
   return (
-    <section id="video-portal" className="py-12 md:py-18 lg:py-24 px-6">
+    <section id="video-portal" className="py-12 md:py-18 lg:py-24 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header — welcome + logout */}
         <Reveal>

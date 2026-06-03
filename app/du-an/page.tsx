@@ -38,7 +38,7 @@ export default function DuAnPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative pt-40 pb-16 px-6 overflow-hidden">
+      <section className="relative pt-40 pb-16 px-4 sm:px-6 overflow-hidden">
         <div className="aurora-blob w-[600px] h-[600px] bg-[#D4A853]/15 top-0 left-1/2 -translate-x-1/2" />
 
         <div className="max-w-5xl mx-auto text-center relative">
@@ -54,7 +54,7 @@ export default function DuAnPage() {
           <Reveal delay={100}>
             <h1
               className="font-heading text-white mb-6"
-              style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)", lineHeight: 1.05 }}
+              style={{ fontSize: "clamp(1.85rem, 6vw, 5rem)", lineHeight: 1.05 }}
             >
               Tuyển Tập <br />
               <span className="text-gold-gradient italic">Khoảnh Khắc</span>
@@ -69,7 +69,7 @@ export default function DuAnPage() {
       </section>
 
       {/* FILTERS */}
-      <section className="px-6 mb-10">
+      <section className="px-4 sm:px-6 mb-10">
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <div className="glass-card rounded-2xl p-5 md:p-6 flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-8">
@@ -132,14 +132,14 @@ export default function DuAnPage() {
       </section>
 
       {/* GRID */}
-      <section className="px-6 pb-24">
+      <section className="px-4 sm:px-6 pb-24">
         <div className="max-w-7xl mx-auto">
           {filtered.length === 0 ? (
             <div className="text-center py-20">
               <p className="text-gray-400">Không có dự án nào khớp với bộ lọc.</p>
             </div>
           ) : (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {filtered.map((v, i) => (
                 <Reveal key={v.id} delay={(i % 6) * 80}>
                   <VideoCard item={v} onOpen={() => setActive(v)} />

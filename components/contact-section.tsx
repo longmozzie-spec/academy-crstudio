@@ -9,7 +9,7 @@ export function ContactSection() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="relative py-16 md:py-24 lg:py-32 px-6 overflow-hidden"
+      className="relative py-16 md:py-24 lg:py-32 px-4 sm:px-6 overflow-hidden"
     >
       {/* Aurora */}
       <div className="aurora-blob w-[480px] h-[480px] bg-[#D4A853]/12 -top-32 -left-32" />
@@ -34,7 +34,7 @@ export function ContactSection() {
           <h2
             id="contact-heading"
             className="font-heading text-white text-center mb-4"
-            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.15 }}
+            style={{ fontSize: "clamp(1.65rem, 5vw, 3.5rem)", lineHeight: 1.15 }}
           >
             Tư Vấn <span className="text-gold-gradient italic">Miễn Phí</span>
           </h2>
@@ -49,7 +49,7 @@ export function ContactSection() {
         <div className="max-w-3xl mx-auto">
           {/* Contact info — centered, no form */}
           <Reveal delay={300}>
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <a
                 href={`tel:${site.contact.phone}`}
                 className="glass-card rounded-2xl p-5 flex items-center gap-4 hover:gold-glow transition-all duration-300 group"

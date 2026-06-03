@@ -6,7 +6,7 @@ import { BrandLogo } from "@/components/brand-logo";
 export function Footer() {
   return (
     <footer role="contentinfo" className="border-t border-[#D4A853]/15 bg-[#050505] relative">
-      <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
         {/* Brand */}
         <div className="lg:col-span-1">
           <div className="flex items-center gap-3 mb-5">
@@ -113,7 +113,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-[#D4A853]/10 py-6 px-6">
+      <div className="border-t border-[#D4A853]/10 py-6 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-gray-400 text-xs">
             © {new Date().getFullYear()} <span className="text-[#D4A853]">{site.brandName}</span> · All rights reserved.

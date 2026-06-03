@@ -30,7 +30,7 @@ function Hero() {
       {/* Vignette */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,rgba(0,0,0,0.85)_100%)] pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 lg:py-24 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-24 w-full">
         <div className="grid lg:grid-cols-[7fr_5fr] gap-12 lg:gap-20 items-center">
           {/* LEFT — Editorial copy */}
           <div>
@@ -58,7 +58,7 @@ function Hero() {
               <h1
                 className="font-heading mb-6"
                 style={{
-                  fontSize: "clamp(2.5rem, 7vw, 5.5rem)",
+                  fontSize: "clamp(2rem, 7vw, 5.5rem)",
                   lineHeight: 1.05,
                   letterSpacing: "-0.015em",
                   background: "linear-gradient(to bottom right, #ffffff 30%, rgba(255,255,255,0.45))",
@@ -138,7 +138,7 @@ function Hero() {
 // ─── ABOUT INSTRUCTOR (mini) ──────────────────────────────────────────────────
 function AboutMini() {
   return (
-    <section className="relative py-16 md:py-24 lg:py-32 px-6">
+    <section className="relative py-16 md:py-24 lg:py-32 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-[5fr_7fr] gap-12 lg:gap-20 items-center">
           <Reveal>
@@ -149,7 +149,7 @@ function AboutMini() {
                 <InstructorPhoto showInitials={false} />
               </div>
               {/* Name plate */}
-              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-[#0a0a0a] border border-[#D4A853]/30 px-6 py-3 whitespace-nowrap">
+              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-[#0a0a0a] border border-[#D4A853]/30 px-4 sm:px-6 py-3 whitespace-nowrap">
                 <p className="font-heading text-white text-base font-bold tracking-wide text-center">
                   {site.brandName}
                 </p>
@@ -172,7 +172,7 @@ function AboutMini() {
             <Reveal delay={100}>
               <h2
                 className="font-heading text-white mb-6"
-                style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)", lineHeight: 1.2 }}
+                style={{ fontSize: "clamp(1.5rem, 4vw, 3rem)", lineHeight: 1.2 }}
               >
                 Người Kiến Tạo <br />
                 <span className="text-gold-gradient italic">Khoảnh Khắc</span>
@@ -204,7 +204,7 @@ function FeaturedVideos() {
   const [active, setActive] = useState<Video | null>(null);
 
   return (
-    <section className="relative py-16 md:py-24 lg:py-32 px-6">
+    <section className="relative py-16 md:py-24 lg:py-32 px-4 sm:px-6">
       <div className="aurora-blob w-[500px] h-[500px] bg-[#D4A853]/8 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
       <div className="max-w-7xl mx-auto relative">
@@ -253,7 +253,7 @@ function FeaturedVideos() {
 // ─── COURSES TEASER ───────────────────────────────────────────────────────────
 function CoursesTeaser() {
   return (
-    <section className="relative py-16 md:py-24 lg:py-32 px-6">
+    <section className="relative py-16 md:py-24 lg:py-32 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <Reveal>
@@ -268,7 +268,7 @@ function CoursesTeaser() {
           <Reveal delay={100}>
             <h2
               className="font-heading text-white mb-4"
-              style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.15 }}
+              style={{ fontSize: "clamp(1.65rem, 5vw, 3.5rem)", lineHeight: 1.15 }}
             >
               Hai Hành Trình <br /><span className="text-gold-gradient italic">Một Đỉnh Cao</span>
             </h2>
@@ -373,7 +373,7 @@ const features = [
 
 function WhyUs() {
   return (
-    <section className="relative py-16 md:py-24 lg:py-32 px-6">
+    <section className="relative py-16 md:py-24 lg:py-32 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <Reveal>
@@ -388,17 +388,17 @@ function WhyUs() {
           <Reveal delay={100}>
             <h2
               className="font-heading text-white"
-              style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)", lineHeight: 1.15 }}
+              style={{ fontSize: "clamp(1.5rem, 4vw, 3rem)", lineHeight: 1.15 }}
             >
               Chất Lượng <span className="text-gold-gradient italic">Bảo Chứng</span>
             </h2>
           </Reveal>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {features.map((f, i) => (
             <Reveal key={f.title} delay={i * 100}>
-              <div className="glass-card rounded-2xl p-7 h-full">
+              <div className="glass-card rounded-2xl p-5 sm:p-7 h-full">
                 <div className="w-14 h-14 rounded-2xl bg-[#D4A853]/10 border border-[#D4A853]/25 flex items-center justify-center mb-5">
                   <f.icon size={22} className="text-[#D4A853]" />
                 </div>

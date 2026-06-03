@@ -40,7 +40,7 @@ export function InstructorPhoto({
     // Placeholder when no photo file exists yet
     return (
       <div className={`relative w-full h-full overflow-hidden bg-gradient-to-br from-[#1a1a1a] via-[#0f0f0f] to-[#050505] flex items-center justify-center ${className}`}>
-        <div className="text-center px-6">
+        <div className="text-center px-4 sm:px-6">
           {showInitials && (
             <div className="w-24 h-24 rounded-full bg-[#D4A853]/10 border border-[#D4A853]/30 flex items-center justify-center mx-auto mb-5">
               <span className="font-heading text-3xl text-[#D4A853]">{initials || "?"}</span>

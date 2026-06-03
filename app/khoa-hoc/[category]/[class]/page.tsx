@@ -42,7 +42,7 @@ export default function ClassDetailPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative pt-40 pb-16 px-6 overflow-hidden">
+      <section className="relative pt-40 pb-16 px-4 sm:px-6 overflow-hidden">
         <div className="aurora-blob w-[600px] h-[600px] top-0 -right-32" style={{ background: `${accent}20` }} />
         <div className="aurora-blob w-[400px] h-[400px] bottom-0 -left-32" style={{ background: `${accent}10`, animationDelay: "-7s" }} />
 
@@ -95,7 +95,7 @@ export default function ClassDetailPage() {
               <Reveal delay={200}>
                 <h1
                   className="font-heading text-white mb-4"
-                  style={{ fontSize: "clamp(2.25rem, 5vw, 4rem)", lineHeight: 1.05 }}
+                  style={{ fontSize: "clamp(1.75rem, 5vw, 4rem)", lineHeight: 1.05 }}
                 >
                   {cls.name}
                 </h1>
@@ -115,21 +115,27 @@ export default function ClassDetailPage() {
 
               {/* Meta */}
               <Reveal delay={500}>
-                <div className="grid grid-cols-3 gap-4 py-6 border-y border-white/8">
-                  <div>
-                    <Clock size={16} className="mb-2" style={{ color: accent }} />
-                    <p className="font-sub text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-1">Thời lượng</p>
-                    <p className="text-white text-sm font-medium leading-tight">{cls.duration ?? "Đang cập nhật"}</p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 py-6 border-y border-white/8">
+                  <div className="flex sm:block items-center gap-3">
+                    <Clock size={16} className="sm:mb-2 shrink-0" style={{ color: accent }} />
+                    <div>
+                      <p className="font-sub text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-0.5 sm:mb-1">Thời lượng</p>
+                      <p className="text-white text-sm font-medium leading-tight">{cls.duration ?? "Đang cập nhật"}</p>
+                    </div>
                   </div>
-                  <div>
-                    <GraduationCap size={16} className="mb-2" style={{ color: accent }} />
-                    <p className="font-sub text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-1">Cấp độ</p>
-                    <p className="text-white text-sm font-medium leading-tight">{cls.level ?? "Đang cập nhật"}</p>
+                  <div className="flex sm:block items-center gap-3">
+                    <GraduationCap size={16} className="sm:mb-2 shrink-0" style={{ color: accent }} />
+                    <div>
+                      <p className="font-sub text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-0.5 sm:mb-1">Cấp độ</p>
+                      <p className="text-white text-sm font-medium leading-tight">{cls.level ?? "Đang cập nhật"}</p>
+                    </div>
                   </div>
-                  <div>
-                    <Layers size={16} className="mb-2" style={{ color: accent }} />
-                    <p className="font-sub text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-1">Hình thức</p>
-                    <p className="text-white text-sm font-medium leading-tight">{cls.format ?? "Đang cập nhật"}</p>
+                  <div className="flex sm:block items-center gap-3">
+                    <Layers size={16} className="sm:mb-2 shrink-0" style={{ color: accent }} />
+                    <div>
+                      <p className="font-sub text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-0.5 sm:mb-1">Hình thức</p>
+                      <p className="text-white text-sm font-medium leading-tight">{cls.format ?? "Đang cập nhật"}</p>
+                    </div>
                   </div>
                 </div>
               </Reveal>
@@ -140,7 +146,7 @@ export default function ClassDetailPage() {
                   <Reveal delay={600}>
                     <div className="flex items-baseline gap-3 mt-8 mb-6">
                       <span
-                        className="font-heading text-5xl font-bold"
+                        className="font-heading text-4xl sm:text-5xl font-bold"
                         style={{
                           background: `linear-gradient(135deg, ${accent}, ${accent2})`,
                           WebkitBackgroundClip: "text",
@@ -250,7 +256,7 @@ export default function ClassDetailPage() {
 
       {/* INTRO VIDEO — chỉ render nếu lớp có khai báo introVideoYoutubeId (kể cả rỗng) */}
       {cls.introVideoYoutubeId !== undefined && (
-        <section className="py-12 md:py-18 lg:py-24 px-6">
+        <section className="py-12 md:py-18 lg:py-24 px-4 sm:px-6">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-10">
               <Reveal>
@@ -323,7 +329,7 @@ export default function ClassDetailPage() {
 
       {/* OUTCOMES */}
       {cls.outcomes && cls.outcomes.length > 0 && (
-        <section className="py-12 md:py-18 lg:py-24 px-6">
+        <section className="py-12 md:py-18 lg:py-24 px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="mb-12">
               <Reveal>
@@ -337,14 +343,14 @@ export default function ClassDetailPage() {
               <Reveal delay={100}>
                 <h2
                   className="font-heading text-white"
-                  style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)", lineHeight: 1.15 }}
+                  style={{ fontSize: "clamp(1.5rem, 4vw, 2.75rem)", lineHeight: 1.15 }}
                 >
                   Sau Khóa Học, <span className="italic" style={{ color: accent }}>Bạn Có Thể</span>
                 </h2>
               </Reveal>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
               {cls.outcomes.map((o, i) => (
                 <Reveal key={i} delay={i * 80}>
                   <div className="glass-card rounded-2xl p-6 flex gap-4 h-full">
@@ -367,7 +373,7 @@ export default function ClassDetailPage() {
 
       {/* CURRICULUM */}
       {cls.modules && cls.modules.length > 0 && (
-        <section className="py-12 md:py-18 lg:py-24 px-6">
+        <section className="py-12 md:py-18 lg:py-24 px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="mb-12">
               <Reveal>
@@ -381,7 +387,7 @@ export default function ClassDetailPage() {
               <Reveal delay={100}>
                 <h2
                   className="font-heading text-white"
-                  style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)", lineHeight: 1.15 }}
+                  style={{ fontSize: "clamp(1.5rem, 4vw, 2.75rem)", lineHeight: 1.15 }}
                 >
                   Chương Trình <span className="italic" style={{ color: accent }}>Chi Tiết</span>
                 </h2>
@@ -399,7 +405,7 @@ export default function ClassDetailPage() {
 
       {/* STUDENT WORKS — sản phẩm của học viên trong lớp */}
       {cls.studentWorks !== undefined && (
-        <section className="py-12 md:py-18 lg:py-24 px-6">
+        <section className="py-12 md:py-18 lg:py-24 px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <Reveal>
@@ -414,7 +420,7 @@ export default function ClassDetailPage() {
               <Reveal delay={100}>
                 <h2
                   className="font-heading text-white"
-                  style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)", lineHeight: 1.15 }}
+                  style={{ fontSize: "clamp(1.5rem, 4vw, 2.75rem)", lineHeight: 1.15 }}
                 >
                   Tinh Hoa <span className="italic" style={{ color: accent }}>Từ Học Trò</span>
                 </h2>
@@ -427,7 +433,7 @@ export default function ClassDetailPage() {
             </div>
 
             {cls.studentWorks.length > 0 ? (
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {cls.studentWorks.map((w, i) => {
                   const youtubeThumb = w.youtubeId ? `https://i.ytimg.com/vi/${w.youtubeId}/hqdefault.jpg` : undefined;
                   const thumb = w.thumb ?? youtubeThumb;
@@ -474,7 +480,7 @@ export default function ClassDetailPage() {
               </div>
             ) : (
               // Placeholder grid khi chưa có sản phẩm — 6 khung mờ
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[1, 2, 3, 4, 5, 6].map((i) => (
                   <Reveal key={i} delay={(i % 3) * 60}>
                     <div
@@ -516,7 +522,7 @@ export default function ClassDetailPage() {
 
       {/* OTHER CLASSES */}
       {otherClasses.length > 0 && (
-        <section className="py-12 md:py-18 lg:py-24 px-6">
+        <section className="py-12 md:py-18 lg:py-24 px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="mb-12">
               <Reveal>

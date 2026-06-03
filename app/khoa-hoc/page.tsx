@@ -9,7 +9,7 @@ import { courseCategories } from "@/lib/site-config";
 export default function KhoaHocOverview() {
   return (
     <>
-      <section className="relative pt-40 pb-20 px-6 overflow-hidden">
+      <section className="relative pt-40 pb-20 px-4 sm:px-6 overflow-hidden">
         <div className="aurora-blob w-[600px] h-[600px] bg-[#D4A853]/15 top-0 right-0" />
         <div
           className="aurora-blob w-[500px] h-[500px] bg-[#4FAE7E]/10 bottom-0 left-0"
@@ -29,7 +29,7 @@ export default function KhoaHocOverview() {
           <Reveal delay={100}>
             <h1
               className="font-heading text-white mb-6"
-              style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)", lineHeight: 1.05 }}
+              style={{ fontSize: "clamp(1.85rem, 6vw, 5rem)", lineHeight: 1.05 }}
             >
               Hai Lộ Trình <br />
               <span className="text-gold-gradient italic">Cùng Một Đam Mê</span>
@@ -46,7 +46,7 @@ export default function KhoaHocOverview() {
       <div className="section-divider mx-6" />
 
       {/* TWO CATEGORY CARDS */}
-      <section className="py-14 md:py-20 lg:py-28 px-6">
+      <section className="py-14 md:py-20 lg:py-28 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6">
             {courseCategories.map((cat, i) => {
@@ -58,7 +58,7 @@ export default function KhoaHocOverview() {
                 <Reveal key={cat.id} delay={i * 150}>
                   <Link
                     href={`/khoa-hoc/${cat.slug}`}
-                    className="group block relative rounded-3xl p-8 md:p-12 h-full overflow-hidden transition-all duration-500 hover:-translate-y-1"
+                    className="group block relative rounded-3xl p-5 sm:p-8 md:p-12 h-full overflow-hidden transition-all duration-500 hover:-translate-y-1"
                     style={{
                       background: `linear-gradient(180deg, ${accent}15, ${accent}03)`,
                       border: `2px solid ${accent}40`,
@@ -92,7 +92,7 @@ export default function KhoaHocOverview() {
 
                       <h2
                         className="font-heading text-white mb-3 leading-tight"
-                        style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)" }}
+                        style={{ fontSize: "clamp(1.5rem, 4vw, 2.75rem)" }}
                       >
                         {cat.name}
                       </h2>
