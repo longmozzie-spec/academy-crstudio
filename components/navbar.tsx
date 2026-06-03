@@ -270,8 +270,8 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="lg:hidden px-6 pb-6 border-t border-[#D4A853]/15 mt-2 pt-5">
-          <div className="flex flex-col gap-1">
+        <div className="lg:hidden px-5 pb-6 border-t border-[#D4A853]/15 mt-2 pt-5 overflow-hidden">
+          <div className="flex flex-col gap-1 max-w-full">
             <Link href="/" className="block py-3 font-sub text-sm text-gray-300">Trang Chủ</Link>
 
             <Link href="/khoa-hoc" className="block py-3 font-sub text-sm text-gray-300">Khóa Học</Link>
@@ -336,7 +336,7 @@ export function Navbar() {
             <a
               href="/#contact"
               onClick={handleConsult}
-              className="mt-3 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#F0C870] to-[#D4A853] text-black font-bold px-5 py-3 rounded-full"
+              className="mt-3 flex w-full items-center justify-center gap-2 bg-gradient-to-r from-[#F0C870] to-[#D4A853] text-black font-bold px-5 py-3 rounded-full"
             >
               <Sparkles size={14} strokeWidth={2.5} />
               Tư Vấn Miễn Phí

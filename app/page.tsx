@@ -270,7 +270,7 @@ function CoursesTeaser() {
               className="font-heading text-white mb-4"
               style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.15 }}
             >
-              Hai Hành Trình, <span className="text-gold-gradient italic">Một Đỉnh Cao</span>
+              Hai Hành Trình <br /><span className="text-gold-gradient italic">Một Đỉnh Cao</span>
             </h2>
           </Reveal>
           <Reveal delay={200}>
@@ -365,7 +365,7 @@ function CoursesTeaser() {
 
 // ─── WHY US ──────────────────────────────────────────────────────────────────
 const features = [
-  { icon: Award, title: "Mentor 1-1", desc: "Học trực tiếp từ giảng viên có hơn 10 năm kinh nghiệm thực chiến trong ngành." },
+  { icon: Award, title: "Mentor Tận Tâm", desc: "Học trực tiếp từ giảng viên có hơn 10 năm kinh nghiệm thực chiến trong ngành." },
   { icon: Users, title: "Cộng Đồng", desc: "Tham gia cộng đồng học viên năng động, hỗ trợ lẫn nhau trong nghề." },
   { icon: Film, title: "Footage Thực Tế", desc: "Học với footage từ những dự án thật, không phải tài liệu mẫu khô khan." },
   { icon: Star, title: "Bảo Hành Trọn Đời", desc: "Học một lần, kiến thức cập nhật cả đời. Hỗ trợ sau khóa học không giới hạn." },
