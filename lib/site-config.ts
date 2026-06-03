@@ -253,7 +253,7 @@ export const courseCategories: CourseCategory[] = [
         duration: "18 buổi",
         level: "Trung cấp — Nâng cao",
         format: "Học online + Mentor kèm cặp",
-        price: "[Học phí]",
+        price: "10.000.000",
         priceUnit: "VNĐ",
         // Video giới thiệu khóa & Sản phẩm học viên
         introVideoYoutubeId: "44OkJSzyv70",
@@ -455,7 +455,7 @@ export const courseCategories: CourseCategory[] = [
         duration: "18 buổi",
         level: "Trung cấp — Nâng cao",
         format: "Học online + Mentor kèm cặp",
-        price: "[Học phí]",
+        price: "12.000.000",
         priceUnit: "VNĐ",
         // Sản phẩm học viên (lớp này KHÔNG có intro video)
         studentWorks: [
@@ -652,7 +652,7 @@ export const courseCategories: CourseCategory[] = [
         duration: "12 buổi",
         level: "Trung cấp",
         format: "Học trực tiếp + Thực hành đi quay",
-        price: "[Học phí]",
+        price: "15.000.000",
         priceUnit: "VNĐ",
         // Video giới thiệu khóa & Sản phẩm học viên
         introVideoYoutubeId: "ymgjtQWDSTw",
