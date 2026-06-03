@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Giảng Viên Dương Minh Thơ — Founder CR Studio",
     description: "10+ năm kinh nghiệm hậu kỳ cinematic, 3000+ học viên đã đào tạo.",
+    images: [{ url: "/instructor/avatar.png", width: 1200, height: 630, alt: "Dương Minh Thơ" }],
   },
 };
 

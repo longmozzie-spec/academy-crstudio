@@ -80,21 +80,19 @@ export const allProjects: Video[] = [
   // ─── Sản phẩm học viên (Facebook Reels) ───────────────────────────────────
   // Drop ảnh thumb vào public/thumbnails/students/ với tên s01.jpg → s09.jpg.
   // Đuôi khác (.png, .webp) cũng OK — sửa lại path tương ứng. Nếu file chưa có → tự fallback về placeholder FB icon.
-  { id: "s01", facebookUrl: "https://www.facebook.com/reel/1707705413942626", thumb: "/thumbnails/students/s01.jpg", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #01" },
-  { id: "s02", facebookUrl: "https://www.facebook.com/reel/1603989030686461", thumb: "/thumbnails/students/s02.jpg", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #02" },
-  { id: "s03", facebookUrl: "https://www.facebook.com/reel/987688373824189",  thumb: "/thumbnails/students/s03.jpg", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #03" },
-  { id: "s04", facebookUrl: "https://www.facebook.com/reel/1951102178870514", thumb: "/thumbnails/students/s04.jpg", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #04" },
-  { id: "s05", facebookUrl: "https://www.facebook.com/reel/924980853223195",  thumb: "/thumbnails/students/s05.jpg", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #05" },
-  { id: "s06", facebookUrl: "https://www.facebook.com/reel/1596734248227218", thumb: "/thumbnails/students/s06.jpg", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #06" },
-  { id: "s07", facebookUrl: "https://www.facebook.com/reel/942221121581010",  thumb: "/thumbnails/students/s07.jpg", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #07" },
-  { id: "s08", facebookUrl: "https://www.facebook.com/reel/25656952207337840", thumb: "/thumbnails/students/s08.jpg", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #08" },
-  { id: "s09", facebookUrl: "https://www.facebook.com/reel/1490599498706711", thumb: "/thumbnails/students/s09.jpg", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #09" },
-  { id: "s10", facebookUrl: "https://www.facebook.com/reel/1357340819371468", thumb: "/thumbnails/students/s10.jpg", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #10" },
-  { id: "s11", facebookUrl: "https://www.facebook.com/reel/1310441397064343", thumb: "/thumbnails/students/s11.jpg", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #11" },
-  { id: "s12", facebookUrl: "https://www.facebook.com/reel/2016671172486542", thumb: "/thumbnails/students/s12.jpg", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #12" },
-  { id: "s13", facebookUrl: "https://www.facebook.com/reel/1325825085901926", thumb: "/thumbnails/students/s13.jpg", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #13" },
-  { id: "s14", facebookUrl: "https://www.facebook.com/reel/1138802398227612", thumb: "/thumbnails/students/s14.jpg", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #14" },
-  { id: "s15", facebookUrl: "https://www.facebook.com/reel/2325529391219666", thumb: "/thumbnails/students/s15.jpg", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #15" },
+  { id: "s01", facebookUrl: "https://www.facebook.com/reel/1707705413942626", thumb: "/thumbnails/students/s01.png", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #01" },
+  { id: "s02", facebookUrl: "https://www.facebook.com/reel/1603989030686461", thumb: "/thumbnails/students/s02.png", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #02" },
+  { id: "s03", facebookUrl: "https://www.facebook.com/reel/987688373824189",  thumb: "/thumbnails/students/s03.png", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #03" },
+  { id: "s05", facebookUrl: "https://www.facebook.com/reel/924980853223195",  thumb: "/thumbnails/students/s05.png", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #05" },
+  { id: "s06", facebookUrl: "https://www.facebook.com/reel/1596734248227218", thumb: "/thumbnails/students/s06.png", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #06" },
+  { id: "s07", facebookUrl: "https://www.facebook.com/reel/942221121581010",  thumb: "/thumbnails/students/s07.png", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #07" },
+  { id: "s08", facebookUrl: "https://www.facebook.com/reel/25656952207337840", thumb: "/thumbnails/students/s08.png", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #08" },
+  { id: "s09", facebookUrl: "https://www.facebook.com/reel/1490599498706711", thumb: "/thumbnails/students/s09.png", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #09" },
+  { id: "s10", facebookUrl: "https://www.facebook.com/reel/1357340819371468", thumb: "/thumbnails/students/s10.png", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #10" },
+  { id: "s11", facebookUrl: "https://www.facebook.com/reel/1310441397064343", thumb: "/thumbnails/students/s11.png", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #11" },
+  { id: "s13", facebookUrl: "https://www.facebook.com/reel/1325825085901926", thumb: "/thumbnails/students/s13.png", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #13" },
+  { id: "s14", facebookUrl: "https://www.facebook.com/reel/1138802398227612", thumb: "/thumbnails/students/s14.png", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #14" },
+  { id: "s15", facebookUrl: "https://www.facebook.com/reel/2325529391219666", thumb: "/thumbnails/students/s15.png", author: "student", category: "Bài Học Viên", isShort: true, title: "Bài Tốt Nghiệp Học Viên #15" },
 ];
 
 // 4 video tinh tuyển hiện trên trang chủ — 2 bài AE + 2 bài Premiere của học viên

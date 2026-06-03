@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CapCut Pro Creator + A.I Workflow",
     description: "18 buổi thực chiến — Portfolio 5-7 video đa thể loại.",
+    images: [{ url: "/brand/hero-bg.png", width: 1200, height: 630, alt: "CapCut Pro Creator + A.I" }],
   },
 };
 

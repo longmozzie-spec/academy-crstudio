@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Khóa Học — Lộ Trình Hậu Kỳ Cinematic",
     description: "Premiere · After Effects · Quay Phim Thực Chiến — mentor kèm cặp.",
+    images: [{ url: "/brand/hero-signature.jpg", width: 1200, height: 630, alt: "Khóa Học Hậu Kỳ Cinematic" }],
   },
 };
 
